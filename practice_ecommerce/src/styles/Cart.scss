@@ -2,11 +2,12 @@
     height: 100%;
     width: 260px;
     position: absolute;
-    top: 0;
-    right: 0px;
+    top: 75px;
+    right: 260px;
     z-index: 100;
     background: #333;
     overflow: hidden;
+    transition: all ease-in-out;
     &.active{
         position: fixed;
     }
@@ -73,5 +74,22 @@
 
     }
 
+}
+
+@keyframes slideIn{
+    from{
+        right: -260px;
+    }
+    to{
+        right: 0;
+    }
+}
+@keyframes slideOut{
+    from{
+        right: 0px;
+    }
+    to{
+        right: -260px;
+    }
 }
 

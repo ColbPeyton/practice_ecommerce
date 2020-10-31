@@ -24,7 +24,7 @@ function Sidebar(props){
 
 
     return(
-        <div className={`sidebar ${active ? 'active' : ''}`} style={ {animation: `${active ? "slideIn" : "slideOut"} 0.5s forwards`} }>
+        <div className={`sidebar ${active ? 'active' : ''}`} style={ {animation: `${active ? "slideInSide" : "slideOutSide"} 0.5s forwards`} }>
             <div className='sidebar-container' style={{top: 0}}>
                 <div className='sidebar-logo'>
                     <NavLink className='link' to='/' onClick={() => disable()}>

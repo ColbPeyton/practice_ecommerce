@@ -2,11 +2,12 @@
     height: 100%;
     width: 260px;
     position: absolute;
-    top: 0;
-    left: -260px;
+    top: 75px;
+    left: 260px;
     z-index: 100;
     background: #333;
     overflow: hidden;
+    transition: all ease-in-out;
     &.active{
         position: fixed;
     }
@@ -19,7 +20,7 @@
         flex-direction: column;
         align-items: flex-start;
         transition: top ease;
-        background: #fff;
+        background: #333;
 
         .sidebar-logo{
             width: 98%;
@@ -101,3 +102,23 @@
 
     }
 }
+
+
+
+@keyframes slideInSide{
+    from{
+        left: -260px;
+    }
+    to{
+        left: 0;
+    }
+}
+@keyframes slideOutSide{
+    from{
+        left: 0px;
+    }
+    to{
+        left: -260px;
+    }
+}
+

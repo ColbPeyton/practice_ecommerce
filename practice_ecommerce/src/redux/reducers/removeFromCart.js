@@ -9,7 +9,7 @@ export const removeItemFromCart = (oldCart = [], action) =>{
 export const removeItemQuanityFromCart = (oldCart = [], action) =>{
     let returnArr = oldCart;
     if(action.type === 'REMOVE_ITEM_QUANITY_FROM_CART'){
-        return oldCart.map((item, index) => {
+        return oldCart.forEach((item, index) => {
             if(item.id === action.payload.id){
                 if(item.quanity > 1){
                     item.quanity -= 1;
