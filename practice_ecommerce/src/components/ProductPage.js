@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
-import { connect } from 'react-redux'
+import { connect} from 'react-redux'
 import { addItemToCart } from '../redux/actions/actions'
+
 
 function ProductPage(props){
 

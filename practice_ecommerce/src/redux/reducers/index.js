@@ -1,5 +1,4 @@
 import { combineReducers } from "redux";
-import {addItemToCart, addItemToCartQuanity} from "./addToCart";
-import {removeItemFromCart, removeItemQuanityFromCart} from "./removeFromCart";
+import {addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart} from "./cartReducers";
 
 export default combineReducers({ addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart});

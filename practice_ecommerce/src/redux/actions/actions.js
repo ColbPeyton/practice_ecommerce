@@ -11,12 +11,11 @@ export const addItemToCart = (name, quanity, id) =>{
         }
     };
 };
-export const addItemToCartQuanity = (name, quanity, id) =>{
+export const addItemToCartQuanity = (name, id) =>{
     return{
         type: 'ADD_ITEM_TO_CART_QUANITY',
         payload:{
             name,
-            quanity,
             id
         }
     };
@@ -27,7 +26,6 @@ export const removeItemFromCart = (name, quanity, id) =>{
         type: 'REMOVE_ITEM_FROM_CART',
         payload:{
             name,
-            quanity,
             id
         }
     };
@@ -38,7 +36,6 @@ export const removeItemQuanityFromCart = (name, quanity, id) =>{
         type: 'REMOVE_ITEM_QUANITY_FROM_CART',
         payload:{
             name,
-            quanity,
             id
         }
     };
