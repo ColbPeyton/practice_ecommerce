@@ -28,7 +28,7 @@ function Sidebar(props){
             <div className='sidebar-container' style={{top: 0}}>
                 <div className='sidebar-logo'>
                     <NavLink className='link' to='/' onClick={() => disable()}>
-                        <img src={icon} alt='gym icon'/>
+                        <img src={icon} alt='Home icon'/>
                     </NavLink> 
                 </div>
                 <div className='sidebar-container-links'>

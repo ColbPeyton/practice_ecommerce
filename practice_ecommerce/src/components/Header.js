@@ -76,6 +76,7 @@ function Header(props){
                 </button>
             </header>
         {renderSidebar()}
+        {renderCart()}
         </div>
     );
 };

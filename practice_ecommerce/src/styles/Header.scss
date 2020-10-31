@@ -1,12 +1,17 @@
 .header-container{
-    width: 100%;
+    overflow: hidden;
+    width: 100vw;
+    max-width: 300px;
     height: 75px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     background: #fff;
     z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     .header-dropdown-container{
         height: 35%;

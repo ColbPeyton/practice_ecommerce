@@ -1,12 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import {NavLink} from "react-router-dom";
+import { connect } from 'react-redux'
+import {addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart} from '../redux/actions/actions'
 
-import logo from '../assets/icons/icon-temp.png'
+import '../styles/Cart.scss';
 
-
-import '../styles/Sidebar.scss';
-
-function Sidebar(props){
+function Cart(props){
 
     const [active, setActive] = useState(true);
 
@@ -17,19 +15,27 @@ function Sidebar(props){
 
 
     // call parent function to disable sidebar when link is clicked
-    // function disable(){
-    //     setActive(false);
-    //     props.disableSidebar();
-    // }
+    function disable(){
+        setActive(false);
+        props.disableSidebar();
+    }
 
 
     return(
-        <div className={`sidebar ${active ? 'active' : ''}`} style={ {animation: `${active ? "slideIn" : "slideOut"} 0.5s forwards`} }>
-            <div className='sidebar-container' style={{top: 0}}>
-
+        <div className={`cart ${active ? 'active' : ''}`} style={ {animation: `${active ? "slideIn-cart" : "slideOut-cart"} 0.5s forwards`} }>
+            <div className='cart-container' style={{top: 0}}>
+                <button onClick={disable}>X</button>
             </div>
         </div>
     )
 }
 
-export default Sidebar;
+
+export default connect(
+    null,
+    { 
+        addItemToCartQuanity,
+        removeItemFromCart, 
+        removeItemQuanityFromCart 
+    }
+  )(Cart)

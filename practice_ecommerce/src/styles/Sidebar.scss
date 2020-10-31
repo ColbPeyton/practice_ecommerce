@@ -1,0 +1,103 @@
+.sidebar{
+    height: 100%;
+    width: 260px;
+    position: absolute;
+    top: 0;
+    left: -260px;
+    z-index: 100;
+    background: #333;
+    overflow: hidden;
+    &.active{
+        position: fixed;
+    }
+    .sidebar-container{
+        width: 100%;
+        max-width: 260px;
+        // height: 460px;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: top ease;
+        background: #fff;
+
+        .sidebar-logo{
+            width: 98%;
+            max-width: 260px;
+            height: 150px;
+            border-bottom: 1px solid #f0eeee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .link{
+                background-color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                height: 90px;
+                width: 100%;
+
+                img{
+                    max-height: auto;
+                    max-width: 100%;
+                    cursor: pointer;
+                }
+    
+            }
+        }
+
+        .sidebar-container-links{
+            height: 476px;
+            width: 100%;
+            max-width: 260px;
+
+            ul{
+                width: 98%;
+                max-width: 260px;
+
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                li{
+                    height: 50px;
+                    width: 100%;
+                    padding-left: 1rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    border-bottom: 1px solid #f0eeee;
+
+
+                    .nav{
+                        height: 100%;
+                        width: 100%;
+                        max-width: 260px;
+
+                        color: #333;  
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-left: 10px;
+                        &:visited{
+                            color: #333;
+                            text-decoration: none;
+                        }
+                        &:hover{
+                            background-color: #333;
+                            color: #333;
+                        }
+
+                    }
+                    
+                }
+            }
+
+        }
+
+    }
+}

@@ -21,19 +21,19 @@ const routes = [
 function App() {
   return (
     <div className="App">
-      <Router >
-          <ScrollToTop />
+    <Router >
+        <ScrollToTop />
           <Header routes={routes}/>
-                <Switch>
-                  {/* <Route component={() => <About width={width} />} path="/about" />
-                  <Route component={Services} path="/services" />
-                  <Route component={() => <Appointment width={width} />} path="/appointment" />
-                  <Route component={Trainers} path="/trainers" /> */}
-                  <Route exact component={() => <HomePage /> } path="/"/>
-                  <Route component={Page404} />
-                </Switch>
-          <Footer />
-        </Router>
+              <Switch>
+                {/* <Route component={() => <About width={width} />} path="/about" />
+                <Route component={Services} path="/services" />
+                <Route component={() => <Appointment width={width} />} path="/appointment" />
+                <Route component={Trainers} path="/trainers" /> */}
+                <Route exact component={() => <HomePage /> } path="/"/>
+                <Route component={Page404} />
+              </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }
