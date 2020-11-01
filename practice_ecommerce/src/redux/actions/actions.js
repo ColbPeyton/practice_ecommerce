@@ -1,9 +1,9 @@
-import { ADD_TODO, TOGGLE_TODO, SET_FILTER } from "./actionTypes";
+import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY} from "./actionTypes";
 
 
 export const addItemToCart = (name, quanity, id) =>{
     return{
-        type: 'ADD_ITEM_TO_CART',
+        type: ADD_ITEM,
         payload:{
             name,
             quanity,
@@ -13,7 +13,7 @@ export const addItemToCart = (name, quanity, id) =>{
 };
 export const addItemToCartQuanity = (name, id) =>{
     return{
-        type: 'ADD_ITEM_TO_CART_QUANITY',
+        type: ADD_QUANITY,
         payload:{
             name,
             id
@@ -21,9 +21,9 @@ export const addItemToCartQuanity = (name, id) =>{
     };
 };
 
-export const removeItemFromCart = (name, quanity, id) =>{
+export const removeItemFromCart = (name, id) =>{
     return{
-        type: 'REMOVE_ITEM_FROM_CART',
+        type: REMOVE_ITEM,
         payload:{
             name,
             id
@@ -33,10 +33,11 @@ export const removeItemFromCart = (name, quanity, id) =>{
 
 export const removeItemQuanityFromCart = (name, quanity, id) =>{
     return{
-        type: 'REMOVE_ITEM_QUANITY_FROM_CART',
+        type: REMOVE_QUANITY,
         payload:{
             name,
-            id
+            quanity,
+            id,
         }
     };
 }

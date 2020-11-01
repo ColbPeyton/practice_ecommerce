@@ -1,64 +1,69 @@
-const initialState = {
+import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY} from '../actions/actionTypes';
+
+
+
+const INITIAL_STATE = {
     cart: []
   };
 
-export const addItemToCart = (oldCart = initialState.cart, action) =>{
-    if(action.type === 'ADD_ITEM_TO_CART'){
+export const addItemToCart = (state = INITIAL_STATE, action) =>{
+    if(action.type === ADD_ITEM){
         // Check cart for existing items. If exists add to quanity
         let itemIndex = -1;
-        oldCart.forEach((item, index) => {
+        state.cart.forEach((item, index) => {
             if(item.id === action.payload.id){
                 itemIndex = index;
             }
         });
         if(itemIndex !== -1){
-            oldCart[itemIndex].quanity += 1;
-            return [...oldCart];
-        }else{
-            return [...oldCart, action.payload]
+            let temp = [...state.cart];
+            temp[itemIndex].quanity += 1;
+            return {...state, cart: temp};
         }
+        return {...state, cart:[...state.cart, action.payload]};
     }
-    return oldCart;
+    return state;
 }
 
-export const addItemToCartQuanity = (oldCart = initialState.cart, action) =>{
-    if(action.type === 'ADD_ITEM_TO_CART_QUANITY'){
-        return oldCart.forEach((item, index) => {
+export const addItemToCartQuanity = (state = INITIAL_STATE.cart, action) =>{
+    if(action.type === ADD_QUANITY){
+        return state.forEach((item, itemIndex) => {
             if(item.id === action.payload.id){
-                oldCart[index].quanity += 1;
-                return [...oldCart];
-            }
-        })
+                let temp = [...state.cart];
+                temp[itemIndex].quanity += 1;
+                return {...state, cart: temp};
+            };
+        });
     };
-    return oldCart;
+    return state;
 }
 
-export const removeItemFromCart = (oldCart = initialState.cart, action) =>{
-    if(action.type === 'REMOVE_ITEM_FROM_CART'){
-        return [oldCart.filter(item => item.id !== action.payload.id)];
+export const removeItemFromCart = (state = INITIAL_STATE.cart, action) =>{
+    if(action.type === REMOVE_ITEM){
+        return [state.filter(item => item.id !== action.payload.id)];
     };
-    return oldCart;
+    return state;
 }
 
-export const removeItemQuanityFromCart = (oldCart = initialState.cart, action) =>{
-    if(action.type === 'REMOVE_ITEM_QUANITY_FROM_CART'){
-        return oldCart.forEach((item, index) => {
+export const removeItemQuanityFromCart = (state = INITIAL_STATE.cart, action) =>{
+    if(action.type === REMOVE_QUANITY){
+        return state.forEach((item, index) => {
             if(item.id === action.payload.id){
                 if(item.quanity > 1){
                     let arr;
-                    oldCart[index].quanity -= 1;
-                    return Object.assign({}, oldCart, {
+                    state[index].quanity -= 1;
+                    return Object.assign({}, state, {
                         cart: [...arr]
                     }) 
                     
                 }else{
-                    return Object.assign({}, oldCart, {
-                        cart: oldCart.slice(index, 1)
+                    return Object.assign({}, state, {
+                        cart: state.slice(index, 1)
                     }) 
                 }
             }
         })
     };
-    return oldCart;
+    return state;
 }
 

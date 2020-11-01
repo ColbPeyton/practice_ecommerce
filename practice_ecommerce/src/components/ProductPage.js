@@ -8,6 +8,7 @@ function ProductPage(props){
     return(
         <div className='productPage'>
             <h1>{props.name}</h1>
+            
             <button onClick={()=> props.addItemToCart(props.name, 1 , 1)}>submit</button>
         </div>
 
