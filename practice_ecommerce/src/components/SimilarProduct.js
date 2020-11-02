@@ -10,6 +10,7 @@ function SimilarProduct(props){
 
     const [clicked, setClicked] = useState(false);
 
+    // Check if product is located in cart. Will update button text 
     useEffect(()=>{
         function checkIfInCart(){
             return props.cart.some(item => item.id === props.item.id);
