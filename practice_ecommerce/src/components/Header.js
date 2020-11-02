@@ -6,6 +6,7 @@ import Cart from './Cart';
 
 import logo from '../assets/icons/icon-temp.png'
 import cartIcon from '../assets/icons/shopping.svg';
+import closeIcon from '../assets/icons/close.svg';
 
 import '../styles/Header.scss';
 
@@ -58,6 +59,12 @@ function Header(props){
 
     }
 
+    function changeCartIcon(){
+        return activeCart
+        ? <img className='close-icon' src={closeIcon} alt='close'></img>
+        : <img className='cart-icon' src={cartIcon} alt='cart'></img>
+    }
+
     return(
         <div>
             <header className='header-container'>
@@ -72,7 +79,7 @@ function Header(props){
                     </NavLink> 
                 </div>
                 <button className={`header-cart-container ${activeCart ? 'active' : ''}`} onClick={()=> enableOrDisableCart()}>
-                    <img className='cart-icon' src={cartIcon} alt='git icon'></img>
+                    {changeCartIcon()}
                 </button>
             </header>
         {renderSidebar()}

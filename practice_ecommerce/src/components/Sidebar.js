@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {NavLink} from "react-router-dom";
 
+import SearchBar from './SearchBar'
+
+
 import icon from '../assets/icons/icon-temp.png'
 
 
@@ -30,6 +33,9 @@ function Sidebar(props){
                     <NavLink className='link' to='/' onClick={() => disable()}>
                         <img src={icon} alt='Home icon'/>
                     </NavLink> 
+                </div>
+                <div className='sidebar-searchbar'>
+                    <SearchBar />
                 </div>
                 <div className='sidebar-container-links'>
                     {/* <nav>

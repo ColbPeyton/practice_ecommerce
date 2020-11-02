@@ -17,7 +17,6 @@ function Cart(props){
     function renderCart(){
         return props.cart 
         ? props.cart.map((item, index) =>{
-            console.log(item)
             return(
                 <div className='cart-item' key={index}>
                    <CartItem item={item}/>

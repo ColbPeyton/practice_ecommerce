@@ -1,5 +1,8 @@
 import React,{useState} from 'react';
+
 import searchLogo from '../assets/icons/search.svg';
+
+import '../styles/SearchBar.scss';
 
 function SearchBar(props){
     const [search, setSearch] = useState('');

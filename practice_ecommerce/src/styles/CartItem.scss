@@ -4,8 +4,19 @@
     .container{
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+
+        .item-img{
+            img{
+                max-height: 50px;
+            }
+            
+        }
+
+        .item-name{
+            width: 25%;
+        }
 
         .item-quanity{
             display: flex;
