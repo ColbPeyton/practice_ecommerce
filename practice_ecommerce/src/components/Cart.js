@@ -1,50 +1,35 @@
 import React, {useState, useEffect} from 'react';
 import { connect } from 'react-redux';
-// import { getCart} from "../redux/selectors";
 
-import {addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart} from '../redux/actions/actions'
+import CartItem from './CartItem';
 
 import '../styles/Cart.scss';
 
 function Cart(props){
 
     const [active, setActive] = useState(true);
-    const [cart, setCart] = useState([]);
 
     useEffect(()=>{
-       setActive(props.cart);
-       setCart(props.cart);
-
-    }, [props.cart]);
+       setActive(props.active);
+    }, [props.active]);
 
 
     function renderCart(){
-        console.log(props)
-        return cart.map(item =>{
+        return props.cart 
+        ? props.cart.map((item, index) =>{
+            console.log(item)
             return(
-                <div className='cart-item'>
-                    <p>{item.name}</p>
-                    <div className='item-buttons'>
-                        <button onClick={()=> addItemToCartQuanity(item.name, item.id)}>+</button>
-                        <button onClick={()=> removeItemQuanityFromCart(item.name, item.id)}>-</button>
-                        <button onClick={()=> removeItemFromCart(item.name, item.id)}>X</button>
-                    </div>
+                <div className='cart-item' key={index}>
+                   <CartItem item={item}/>
                 </div>
             )
         })
+        : <p>Your cart is empty</p>
     }
-
-    // call parent function to disable sidebar when link is clicked
-    // function disable(){
-    //     setActive(false);
-    //     props.disableSidebar();
-    // }
-
-
 
     return(
         <div className={`cart ${active ? 'active' : ''}`} style={ {animation: `${active ? "slideIn" : "slideOut"} 0.5s forwards`} }>
-            <div className='cart-container' style={{top: 0}}>
+            <div className='cart-container'>
                 {renderCart()}
             </div>
         </div>
@@ -55,11 +40,4 @@ const mapStateToProps = state => {
     return {cart: state.cart}
 }
 
-export default connect(
-    (mapStateToProps),
-    { 
-        addItemToCartQuanity,
-        removeItemFromCart, 
-        removeItemQuanityFromCart 
-    }
-  )(Cart)
+export default connect(mapStateToProps)(Cart)

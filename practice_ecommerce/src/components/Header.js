@@ -27,7 +27,7 @@ function Header(props){
 
     function renderCart(){
         return activeCart 
-        ? <Cart cart={cart} disableSidebar={enableOrDisableCart} />
+        ? <Cart active={cart} disableSidebar={enableOrDisableCart} />
         : '';
     }
 

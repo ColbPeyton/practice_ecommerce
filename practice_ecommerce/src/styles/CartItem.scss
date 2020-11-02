@@ -1,0 +1,16 @@
+.cart-item{
+    height: 10%;
+    width: 100%;
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-quanity{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}

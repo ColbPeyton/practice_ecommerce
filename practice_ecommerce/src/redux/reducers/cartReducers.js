@@ -28,7 +28,7 @@ const addItemToCart = (state = INITIAL_STATE, action) =>{
         // Check cart for existing items. If exists add to quanity
         let itemIndex = findLocation(state.cart, 'id', action.payload.id);
         if(itemIndex !== -1){
-          return addItemToCart(state, action, itemIndex)
+          return addItemToCartQuanity(state, action, itemIndex)
         }
         return {...state, cart:[...state.cart, action.payload]};
     }
