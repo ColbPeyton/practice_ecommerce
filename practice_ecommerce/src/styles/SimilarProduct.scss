@@ -5,22 +5,15 @@
     justify-content: center;
     align-items: center;
 
-    &.odd{
-        background-color: #f4f4f4;
-    }
-    &.even{
-        background-color: #e2dddd;
-    }
-
     .similar-product-container{
-        width: 100%;
+        width: 90%;
         height: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
 
         .image{
-            width: 40%;
+            width: 50%;
             height: 80%;
 
             img{
@@ -47,6 +40,20 @@
                 color: #fff;
                 border: none;
                 border-radius: 5px;            
+            }
+        }
+    }
+
+    
+    &.odd{
+        background-color: #f4f4f4;
+    }
+    &.even{
+        background-color: #e2dddd;
+
+        .similar-product-container{
+            .image{
+                order: 1;
             }
         }
     }

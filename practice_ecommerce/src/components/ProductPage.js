@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart } from '../redux/actions/actions'
 
 import SimilarProduct from './SimilarProduct';
+import ProductCarousel from './ProductCarousel';
 
 import img from '../assets/images/placeholderProductImage.jpg';
 
@@ -31,7 +32,13 @@ function ProductPage(props){
                 </div>
            </div> 
            <div className='similar-products'>
-                <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={{name: 'bird', id: 3, img:img}}/>
+                <ProductCarousel products={[
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={{name: 'bird', id: 2, img:img}}/>,
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={{name: 'bird', id: 3, img:img}}/>,
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={{name: 'bird', id: 4, img:img}}/>,
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={{name: 'bird', id: 5, img:img}}/>
+                ]}
+                />
            </div>
         </main>
 
