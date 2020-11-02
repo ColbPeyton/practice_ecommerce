@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart } from '../redux/actions/actions'
+
+import SimilarProduct from './SimilarProduct';
+
 import img from '../assets/images/placeholderProductImage.jpg';
 
 
@@ -27,6 +30,9 @@ function ProductPage(props){
                     <button onClick={()=> { props.addItemToCart(props.name, 1 , 1);}}>Add To Cart</button>
                 </div>
            </div> 
+           <div className='similar-products'>
+                <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={{name: 'bird', id: 3, img:img}}/>
+           </div>
         </main>
 
         
