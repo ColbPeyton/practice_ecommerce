@@ -1,4 +1,4 @@
-import { combineReducers } from "redux";
-import {addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart} from "./cartReducers";
+// import { combineReducers } from "redux";
+import {cartReducer} from "./cartReducers";
 
-export default combineReducers({ addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart});
+export default cartReducer;

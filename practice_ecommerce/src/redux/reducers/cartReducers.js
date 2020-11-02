@@ -6,64 +6,76 @@ const INITIAL_STATE = {
     cart: []
   };
 
-export const addItemToCart = (state = INITIAL_STATE, action) =>{
+
+
+export const cartReducer = (state = INITIAL_STATE, action) =>{
+    switch(action.type){
+        case ADD_ITEM:
+            return addItemToCart(state, action);
+        case ADD_QUANITY:
+            return addItemToCartQuanity(state, action);
+        case REMOVE_ITEM:
+            return removeItemFromCart(state, action);
+        case REMOVE_QUANITY:
+            return removeItemQuanityFromCart(state, action);
+        default:
+            return state;
+    }
+}
+
+const addItemToCart = (state = INITIAL_STATE, action) =>{
     if(action.type === ADD_ITEM){
         // Check cart for existing items. If exists add to quanity
-        let itemIndex = -1;
-        state.cart.forEach((item, index) => {
-            if(item.id === action.payload.id){
-                itemIndex = index;
-            }
-        });
+        let itemIndex = findLocation(state.cart, 'id', action.payload.id);
         if(itemIndex !== -1){
-            let temp = [...state.cart];
-            temp[itemIndex].quanity += 1;
-            return {...state, cart: temp};
+          return addItemToCart(state, action, itemIndex)
         }
         return {...state, cart:[...state.cart, action.payload]};
     }
     return state;
 }
 
-export const addItemToCartQuanity = (state = INITIAL_STATE.cart, action) =>{
-    if(action.type === ADD_QUANITY){
-        return state.forEach((item, itemIndex) => {
-            if(item.id === action.payload.id){
-                let temp = [...state.cart];
-                temp[itemIndex].quanity += 1;
-                return {...state, cart: temp};
-            };
-        });
-    };
+const addItemToCartQuanity = (state = INITIAL_STATE, action, index = -1) =>{
+    // If location of item is already known
+    if(index !== -1){
+        let temp = [...state.cart];
+        temp[index].quanity += action.payload.quanity;
+        return {...state, cart: temp};
+    }
+    let itemIndex = findLocation(state.cart, 'id', action.payload.id);
+    if(itemIndex !== -1){
+        let temp = [...state.cart];
+        temp[itemIndex].quanity += action.payload.quanity;
+        return {...state, cart: temp};
+    }
     return state;
 }
 
-export const removeItemFromCart = (state = INITIAL_STATE.cart, action) =>{
-    if(action.type === REMOVE_ITEM){
-        return [state.filter(item => item.id !== action.payload.id)];
-    };
+const removeItemFromCart = (state = INITIAL_STATE, action) =>{
+    return {...state, cart: [...state.cart.filter(item => item.id !== action.payload.id)]};
+}
+
+const removeItemQuanityFromCart = (state = INITIAL_STATE, action) =>{
+    let itemIndex = findLocation(state.cart, 'id', action.payload.id);
+    if(itemIndex !== -1){
+        let temp = [...state.cart];
+        temp[itemIndex].quanity -= action.payload.quanity;
+        if(temp[itemIndex].quanity <= 0){
+            return removeItemFromCart(state, action)
+        }
+        return {...state, cart: temp};
+    }
     return state;
 }
 
-export const removeItemQuanityFromCart = (state = INITIAL_STATE.cart, action) =>{
-    if(action.type === REMOVE_QUANITY){
-        return state.forEach((item, index) => {
-            if(item.id === action.payload.id){
-                if(item.quanity > 1){
-                    let arr;
-                    state[index].quanity -= 1;
-                    return Object.assign({}, state, {
-                        cart: [...arr]
-                    }) 
-                    
-                }else{
-                    return Object.assign({}, state, {
-                        cart: state.slice(index, 1)
-                    }) 
-                }
-            }
-        })
-    };
-    return state;
-}
 
+function findLocation(arr, val, id){
+    let location = -1;
+    arr.forEach((el, index)=> {
+        if(el[val] === id){
+            location = index;
+        };
+    })
+
+    return location;
+}

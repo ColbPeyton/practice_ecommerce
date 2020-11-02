@@ -16,7 +16,7 @@ function SearchBar(props){
         <div className='searchbar'>
             <form onSubmit={(event)=>onSubmit(event)}>
                 <input type='text' value={search} onChange={(event) => onChange(event)} />
-                <button className='search'><img src={searchLogo} /></button>
+                <button className='search'><img src={searchLogo} alt='search'/></button>
             </form>
         </div>
     )

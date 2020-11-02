@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import Sidebar from './Sidebar';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 import Cart from './Cart';
 
 import logo from '../assets/icons/icon-temp.png'

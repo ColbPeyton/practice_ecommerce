@@ -11,11 +11,12 @@ export const addItemToCart = (name, quanity, id) =>{
         }
     };
 };
-export const addItemToCartQuanity = (name, id) =>{
+export const addItemToCartQuanity = (name, quanity, id) =>{
     return{
         type: ADD_QUANITY,
         payload:{
             name,
+            quanity,
             id
         }
     };

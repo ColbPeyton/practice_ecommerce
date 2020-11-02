@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { connect } from 'react-redux';
-import { getCart} from "../redux/selectors";
+// import { getCart} from "../redux/selectors";
 
 import {addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart} from '../redux/actions/actions'
 
@@ -12,12 +12,10 @@ function Cart(props){
     const [cart, setCart] = useState([]);
 
     useEffect(()=>{
-       setActive(props.cart)
-    }, [props.cart]);
+       setActive(props.cart);
+       setCart(props.cart);
 
-    useEffect(()=>{
-        setCart(props.cart);
-    }, [])
+    }, [props.cart]);
 
 
     function renderCart(){
