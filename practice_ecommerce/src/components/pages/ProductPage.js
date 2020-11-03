@@ -11,12 +11,13 @@ import img from '../../assets/images/placeholderProductImage.jpg';
 import '../../styles/ProductPage.scss';
 
 function ProductPage(props){
+
     return(
         <main className='product-page'>
            <div className='product-container'>
                <div className='product'>
                     <div className='img'>
-                        <img src={img} alt={'placeholder'} />
+                        <img src={props.item.img.default} alt={props.item.name} />
                     </div>
                     <div className='name'>
                         <h2>{props.item.name}</h2>

@@ -11,20 +11,33 @@ function Products(props){
 
     function renderProducts(){
         return productData.map((product, index) => {
-            return <button onClick={()=> updateCurrentAndLoadProductPage(product)} key={index}>
-                        {product.name}
+            console.log(product.img)
+            return <button onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
+                    style={
+                        {
+                            backgroundImage: `url(${product.img.default})`,
+                            backgroundSize: 'cover'
+                        }
+                    }>
+                        <div className='product-item' >
+                            {product.name}
+                        </div>
+                        
                 </button>
         })
     }
 
     function updateCurrentAndLoadProductPage(product){
-        props.currentItem(product.name, product.id);
-        props.history.push(`/product/${product.id}`);
+        props.currentItem(product.name, product.id, product.img, product.price );
+        props.history.push(`/products/${product.id}`);
     }
     return(
         <main className='products'>
             <div className='products-container'>
-            {renderProducts()}
+            <div className='product-title'>All Products</div>
+            <div className='products-listed'>
+                {renderProducts()}
+            </div>
             </div>
         </main>
     )

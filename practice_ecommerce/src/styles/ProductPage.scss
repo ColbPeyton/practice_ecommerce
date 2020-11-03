@@ -2,10 +2,11 @@
     overflow: hidden;
     height: 100%;
     width: 100%;
-
+    margin-top: 75px;
     .product-container{
-        height: 175vh;
+        height: 70%;
         width: 100%;
+        min-height: 625px;
         max-height: 650px;
         display: flex;
         justify-content: space-around;
@@ -61,7 +62,7 @@
 
     
     .similar-products{
-        height: 65vh;
+        height: 30%;
         max-height: 350px;
         .similar-title{
             width: 100%;

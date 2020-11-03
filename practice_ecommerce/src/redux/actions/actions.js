@@ -44,12 +44,14 @@ export const removeItemQuanityFromCart = (name, quanity, id) =>{
 }
 
 
-export const currentItem = (name, id) => {
+export const currentItem = (name, id, img, price) => {
     return{
         type: CURRENT_ITEM,
         payload:{
             name,
-            id
+            id,
+            img,
+            price
         }
     }
 }

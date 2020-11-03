@@ -5,7 +5,9 @@ const INITIAL_STATE = {
     cart: [],
     currentItem: {
         name: '',
-        id: 0
+        id: 0,
+        img: '',
+        price: 0
     }
   };
 
@@ -76,7 +78,14 @@ const removeItemQuanityFromCart = (state = INITIAL_STATE, action) =>{
 
 
 const updateCurrentItem = (state= INITIAL_STATE, action) =>{
-    return {...state, currentItem: {name: action.payload.name, id: action.payload.id}}
+    return {...state, currentItem: 
+        {
+            name: action.payload.name, 
+            id: action.payload.id, 
+            img: action.payload.img,
+            price: action.payload.price 
+        }
+    }
 }
 
 

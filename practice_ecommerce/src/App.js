@@ -6,7 +6,7 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  NavLink
+  NavLink 
 } from "react-router-dom";
 
 import {useState, useEffect} from 'react';
@@ -20,6 +20,9 @@ import Products from './components/pages/Products';
 import ProductPage from './components/pages/ProductPage';
 import Page404 from './components/pages/Page404';
 
+// Helpers
+import {findItem, getIDFromPath, checkIfProductPath} from './_helpers/findItem';
+
 const routes = [
   <NavLink exact className='nav' activeClassName="selected" to="/">Home</NavLink>,
   <NavLink exact className='nav' activeClassName="selected" to="/products">Products</NavLink>
@@ -30,10 +33,17 @@ function App(props) {
 
   const [item, setItem] = useState(props.currentItem);
 
+  // Loads path product if it was not set by props.currentItem
   useEffect(()=>{
-    console.log(props.currentItem)
-    setItem(props.currentItem)
-  }, [props.currentItem])
+    const path = getIDFromPath(window.location.href);
+    if(checkIfProductPath(window.location.href) && path){
+      setItem(findItem(path[0]))
+    }else{
+      setItem(props.currentItem)
+    }
+   
+  }, [props.currentItem, window.location.href])
+
   
   return (
     <div className="App">
@@ -44,8 +54,9 @@ function App(props) {
                 {/* <Route component={} path='/category' />
                 <Route component={} path='/category/:category_id' />
                  */}
+
+                 <Route component={()=> <ProductPage item={item}/> } path={`/products/:${item.id}`} />
                 <Route component={Products} path='/products' />
-                <Route component={()=> <ProductPage item={item}/> } path={`/product/${item.id}`} />
                 <Route component={() => <HomePage /> } path="/home"/>
                 <Route exact component={() => <HomePage /> } path="/"/>
                 <Route component={Page404} />
