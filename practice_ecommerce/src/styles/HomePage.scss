@@ -1,3 +1,26 @@
 .home{
     margin-top: 75px;
+    height: 100%;
+    width: 100%;
+
+    .home-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .title{
+            
+        }
+        .content{
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+    }
 }

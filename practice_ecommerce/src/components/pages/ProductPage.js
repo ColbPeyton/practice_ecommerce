@@ -17,7 +17,7 @@ function ProductPage(props){
            <div className='product-container'>
                <div className='product'>
                     <div className='img'>
-                        <img src={props.item.img.default} alt={props.item.name} />
+                        <img src={props.item.img[0].default} alt={props.item.name} />
                     </div>
                     <div className='name'>
                         <h2>{props.item.name}</h2>

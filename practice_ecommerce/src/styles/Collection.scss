@@ -1,0 +1,30 @@
+.collection{
+    height: 100%;
+    width: 100%;
+    .container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .title{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                border: none;
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}

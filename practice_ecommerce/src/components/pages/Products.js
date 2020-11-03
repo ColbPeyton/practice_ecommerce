@@ -11,11 +11,10 @@ function Products(props){
 
     function renderProducts(){
         return productData.map((product, index) => {
-            console.log(product.img)
             return <button onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
                     style={
                         {
-                            backgroundImage: `url(${product.img.default})`,
+                            backgroundImage: `url(${product.img[0].default})`,
                             backgroundSize: 'cover'
                         }
                     }>
