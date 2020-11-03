@@ -1,4 +1,4 @@
-import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY} from "./actionTypes";
+import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY, CURRENT_ITEM} from "./actionTypes";
 
 
 export const addItemToCart = (name, quanity, id) =>{
@@ -41,4 +41,15 @@ export const removeItemQuanityFromCart = (name, quanity, id) =>{
             id,
         }
     };
+}
+
+
+export const currentItem = (name, id) => {
+    return{
+        type: CURRENT_ITEM,
+        payload:{
+            name,
+            id
+        }
+    }
 }

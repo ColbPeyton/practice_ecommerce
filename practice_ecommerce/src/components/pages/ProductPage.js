@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart } from '../redux/actions/actions'
+import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart } from '../../redux/actions/actions';
 
-import SimilarProduct from './SimilarProduct';
-import ProductCarousel from './ProductCarousel';
+import SimilarProduct from '../SimilarProduct';
+import ProductCarousel from '../ProductCarousel';
 
-import img from '../assets/images/placeholderProductImage.jpg';
+import img from '../../assets/images/placeholderProductImage.jpg';
 
 
-import '../styles/ProductPage.scss';
+import '../../styles/ProductPage.scss';
 
 function ProductPage(props){
     return(
@@ -19,7 +19,7 @@ function ProductPage(props){
                         <img src={img} alt={'placeholder'} />
                     </div>
                     <div className='name'>
-                        <h2>{props.name}</h2>
+                        <h2>{props.item.name}</h2>
                     </div>
                     <div className='desc'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum eleifend purus, 
@@ -28,10 +28,15 @@ function ProductPage(props){
                     </div>
                </div>
                 <div className='cart-option'>
-                    <button onClick={()=> { props.addItemToCart(props.name, 1 , 1);}}>Add To Cart</button>
+                    <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id);}}>Add To Cart</button>
                 </div>
            </div> 
+
            <div className='similar-products'>
+           <div className='similar-title'>
+                <h2>Check Out Something Similar</h2>
+            </div>
+            <div className='products'>
                 <ProductCarousel products={[
                     <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={{name: 'bird', id: 2, img:img}}/>,
                     <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={{name: 'bird', id: 3, img:img}}/>,
@@ -39,6 +44,8 @@ function ProductPage(props){
                     <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={{name: 'bird', id: 5, img:img}}/>
                 ]}
                 />
+            </div>
+
            </div>
         </main>
 

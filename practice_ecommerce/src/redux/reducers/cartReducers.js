@@ -1,9 +1,12 @@
-import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY} from '../actions/actionTypes';
-
+import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY, CURRENT_ITEM } from '../actions/actionTypes';
 
 
 const INITIAL_STATE = {
-    cart: []
+    cart: [],
+    currentItem: {
+        name: '',
+        id: 0
+    }
   };
 
 
@@ -18,6 +21,8 @@ export const cartReducer = (state = INITIAL_STATE, action) =>{
             return removeItemFromCart(state, action);
         case REMOVE_QUANITY:
             return removeItemQuanityFromCart(state, action);
+        case CURRENT_ITEM:
+            return updateCurrentItem(state, action);
         default:
             return state;
     }
@@ -66,6 +71,12 @@ const removeItemQuanityFromCart = (state = INITIAL_STATE, action) =>{
         return {...state, cart: temp};
     }
     return state;
+}
+
+
+
+const updateCurrentItem = (state= INITIAL_STATE, action) =>{
+    return {...state, currentItem: {name: action.payload.name, id: action.payload.id}}
 }
 
 

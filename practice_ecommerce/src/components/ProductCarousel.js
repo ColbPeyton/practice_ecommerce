@@ -7,7 +7,6 @@ function ProductCarousel(props){
     const [index, setIndex] = useState(0);
     const [cycle, setCycle] = useState(true);
 
-    // const cycleOnOwn = useRef(setInterval(()=>{ cycleRight();}, 2500));
 
     useEffect(()=>{
         if(cycle){
@@ -20,6 +19,7 @@ function ProductCarousel(props){
     }, [index, cycle])
 
  
+    // Will be called in SetTimeout, user click will disable cycle for a period of time
     function cycleLeft(user = false){
         if(index <= 0){
             setIndex(props.products.length - 1);
@@ -44,7 +44,7 @@ function ProductCarousel(props){
     }
 
 
-    function renderPosition(){
+    function renderCurrentPosition(){
         return props.products.map((el, pos) => {
             return <button key={pos} onClick={()=>{setIndex(pos)}}>
                         <i className={`fas fa-circle ${index >= pos ? 'active' : ''}`} ></i>
@@ -65,7 +65,7 @@ function ProductCarousel(props){
                     </button>
                 </div>
                 <div className='position'>
-                    {renderPosition()}
+                    {renderCurrentPosition()}
                 </div>
                 <div className='arrow'>
                     <button onClick={()=> cycleRight(true)}> 

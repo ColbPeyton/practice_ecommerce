@@ -2,6 +2,8 @@ import React from 'react';
 
 import '../styles/Footer.scss';
 
+const link = 'https://www.colbypeyton.com/';
+
 function Footer(props){
     return(
         <footer className='footer'>
@@ -15,7 +17,7 @@ function Footer(props){
                     <ul>
                         <li>Lorem </li>
                         <li>Lorem </li>
-                        <li>All Right Reserved &reg;</li>
+                        <li>Developed by <a href={link}>ColbPeyton</a></li>
                     </ul>
                 </div>
             </div> 

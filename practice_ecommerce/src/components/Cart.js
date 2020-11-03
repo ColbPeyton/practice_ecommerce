@@ -27,8 +27,8 @@ function Cart(props){
     }
 
     return(
-        <div className={`cart ${active ? 'active' : ''}`} style={ {animation: `${active ? "slideIn" : "slideOut"} 0.5s forwards`} }>
-            <div className='cart-container'>
+        <div className={`cart ${active ? 'active' : ''}`} style={ {animation: `${active ? "slideInCart" : "slideOutCart"} 0.5s forwards`} }>
+            <div className='cart-container' style={{top: 0}}>
                 {renderCart()}
             </div>
         </div>
