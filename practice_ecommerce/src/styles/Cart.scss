@@ -3,13 +3,17 @@
     width: 260px;
     position: absolute;
     top: 75px;
-    right: 260px;
     z-index: 100;
     background: #f4f4f4;
     overflow: hidden;
-    transition: all ease-in-out;
+    // transition: all 500ms ease-in-out;
     &.active{
         position: fixed;
+
+    }
+    &.not-active{
+        position: fixed;
+
     }
     .cart-container{
         width: 100%;
@@ -81,7 +85,7 @@
         right: -260px;
     }
     to{
-        right: 0;
+        right: 0px;
     }
 }
 @keyframes slideOutCart{
