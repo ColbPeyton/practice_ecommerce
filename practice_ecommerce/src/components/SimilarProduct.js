@@ -50,7 +50,7 @@ function SimilarProduct(props){
     );
 }
 const mapStateToProps = state => {
-    return { cart: state.cart };
+    return { cart: state.cart};
   };
 
 export default connect(mapStateToProps)(SimilarProduct);

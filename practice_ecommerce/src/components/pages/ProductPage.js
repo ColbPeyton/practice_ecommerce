@@ -1,11 +1,13 @@
 import React from 'react';
+
 import { connect } from 'react-redux'
-import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart } from '../../redux/actions/actions';
+import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart, currentItem} from '../../redux/actions/actions';
 
 import SimilarProduct from '../SimilarProduct';
 import ProductCarousel from '../ProductCarousel';
 
 import img from '../../assets/images/placeholderProductImage.jpg';
+
 
 
 import '../../styles/ProductPage.scss';
@@ -17,8 +19,8 @@ function ProductPage(props){
            <div className='product-container'>
                <div className='product'>
                     <div className='img'>
-                        <img src={props.item.img[0].default} alt={props.item.name} />
-                    </div>
+                    <img src={props.item.img[0].default} alt={props.item.name} />
+                </div>
                     <div className='name'>
                         <h2>{props.item.name}</h2>
                     </div>
@@ -54,7 +56,7 @@ function ProductPage(props){
     )
 }
 const mapStateToProps = state => {
-    return { cart: state.cart };
+    return { cart: state.cart, currentlyViewedItem: state.currentlyViewedItem  };
   };
 
 export default connect(
@@ -64,6 +66,7 @@ export default connect(
         addItemToCartQuanity,
         removeItemFromCart,
         removeItemQuanityFromCart,
+        currentItem
      }
   )(ProductPage)
 

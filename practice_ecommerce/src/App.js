@@ -1,4 +1,5 @@
 import './styles/App.scss';
+import {useState, useEffect} from 'react';
 
 import { connect } from 'react-redux'
 
@@ -6,10 +7,9 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  NavLink 
+  NavLink, 
 } from "react-router-dom";
 
-import {useState, useEffect} from 'react';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,7 +21,11 @@ import ProductPage from './components/pages/ProductPage';
 import Page404 from './components/pages/Page404';
 
 // Helpers
-import {findItem, getIDFromPath, checkIfProductPath} from './_helpers/findItem';
+import {findItem, getIDFromPath} from './_helpers/findItem';
+
+
+// actions
+import {currentItem} from './redux/actions/actions';
 
 const routes = [
   <NavLink exact className='nav' activeClassName="selected" to="/">Home</NavLink>,
@@ -31,19 +35,18 @@ const routes = [
 
 function App(props) {
 
-  const [item, setItem] = useState(props.currentItem);
+  const [item, setItem] = useState(props.currentlyViewedItem);
 
-  // Loads path product if it was not set by props.currentItem
+
+  // Loads path product if it was not set by props.currentlyViewedItem
   useEffect(()=>{
-    const path = getIDFromPath(window.location.href);
-    if(checkIfProductPath(window.location.href) && path){
-      setItem(findItem(path[0]))
-    }else{
-      setItem(props.currentItem)
-    }
-   
-  }, [props.currentItem, window.location.href])
-
+      const path = getIDFromPath(window.location.href);
+      if(path){
+          setItem(findItem(path[0]))
+      }else{
+          setItem(props.currentlyViewedItem)
+      }
+  }, [getIDFromPath(window.location.href)])
   
   return (
     <div className="App">
@@ -56,6 +59,8 @@ function App(props) {
                  */}
 
                  <Route component={()=> <ProductPage item={item}/> } path={`/products/:${item.id}`} />
+                 
+                {/* <Route component={()=> <ProductPage /> } path={renderID()} /> */}
                 <Route component={Products} path='/products' />
                 <Route component={() => <HomePage /> } path="/home"/>
                 <Route exact component={() => <HomePage /> } path="/"/>
@@ -69,11 +74,15 @@ function App(props) {
 
 
 const mapStateToProps = state => {
-  return { currentItem: state.currentItem };
+  return { currentlyViewedItem: state.currentlyViewedItem };
 };
 
-export default connect(mapStateToProps)(App)
-
+export default connect(
+  mapStateToProps,
+  { 
+    currentItem
+  }
+  )(App)
 
                 {/* <Route component={() => <About width={width} />} path="/about" />
                 <Route component={Services} path="/services" />

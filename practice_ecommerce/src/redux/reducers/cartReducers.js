@@ -3,7 +3,7 @@ import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY, CURRENT_ITEM } from
 
 const INITIAL_STATE = {
     cart: [],
-    currentItem: {
+    currentlyViewedItem: {
         name: '',
         id: 0,
         img: '',
@@ -78,7 +78,7 @@ const removeItemQuanityFromCart = (state = INITIAL_STATE, action) =>{
 
 
 const updateCurrentItem = (state= INITIAL_STATE, action) =>{
-    return {...state, currentItem: 
+    return {...state, currentlyViewedItem: 
         {
             name: action.payload.name, 
             id: action.payload.id, 
