@@ -1,11 +1,15 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom';
 
-import productData from '../../_data/products';
+import {printData} from '../../_data/products';
 
 import Collection from '../Collection';
 
 import '../../styles/HomePage.scss';
+
+
+// images
+import banner from '../../assets/images/Branding/Etsy Banner 2-02.jpg';
 
 function HomePage(props){
 
@@ -18,10 +22,10 @@ function HomePage(props){
         <main className='home'>
             <div className='home-container'>
                 <div className='title'>
-                    <h1>Website Title</h1>
+                    <img src={banner}  alt='pixel bee creative shop'/>
                 </div>
                 <div className='content'>
-                    <Collection name={'Dogs'} item={[productData[0], productData[1],productData[2]]} updatePath={updatePath}/>
+                    <Collection name={'Dogwarts'} item={[printData[0], printData[1],printData[2]]} updatePath={updatePath}/>
      
                 </div>
             </div>

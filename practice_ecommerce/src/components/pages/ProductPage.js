@@ -9,7 +9,7 @@ import ProductCarousel from '../ProductCarousel';
 import img from '../../assets/images/placeholderProductImage.jpg';
 
 // Helpers
-import {findItem, getIDFromPath, checkIfProductPath} from '../../_helpers/findItem';
+import {findItem, getIDFromPath, checkIfProductPath, randomProduct} from '../../_helpers/findItem';
 
 import '../../styles/ProductPage.scss';
 
@@ -22,6 +22,7 @@ function ProductPage(props){
         if(props.item.id !== path.current[0]){
             console.log('yes', props.item.id, viewedItem)
             setViewedItem(findItem(path.current[0]));
+
         }else{
             console.log('no', props.item.id, viewedItem)
 
@@ -40,6 +41,9 @@ function ProductPage(props){
                     <div className='name'>
                         <h2>{viewedItem.name}</h2>
                     </div>
+                    <div className='price'>
+                        <h3>{viewedItem.price}</h3>
+                    </div>
                     <div className='desc'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum eleifend purus, 
                         vitae convallis mi ultricies a. Maecenas mollis, mi eget pellentesque consequat, sapien nisi 
@@ -57,10 +61,10 @@ function ProductPage(props){
             </div>
             <div className='products'>
                 <ProductCarousel products={[
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={{name: 'bird', id: 2, img:img}}/>,
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={{name: 'bird', id: 3, img:img}}/>,
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={{name: 'bird', id: 4, img:img}}/>,
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={{name: 'bird', id: 5, img:img}}/>
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={randomProduct(viewedItem.id)}/>,
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={randomProduct(viewedItem.id)}/>,
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={randomProduct(viewedItem.id)}/>,
+                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={randomProduct(viewedItem.id)}/>,
                 ]}
                 />
             </div>

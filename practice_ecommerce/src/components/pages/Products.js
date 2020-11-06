@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 
 import {currentItem} from '../../redux/actions/actions';
-import productData from '../../_data/products';
+import {completeData} from '../../_data/products';
 
 
 import '../../styles/Products.scss';
@@ -10,7 +10,7 @@ import '../../styles/Products.scss';
 function Products(props){
 
     function renderProducts(){
-        return productData.map((product, index) => {
+        return completeData.map((product, index) => {
             return <button onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
                     style={
                         {

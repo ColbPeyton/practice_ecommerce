@@ -1,9 +1,12 @@
+@import './Colors';
+
 .similar-product{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 225px;
 
     .similar-product-container{
         width: 90%;
@@ -36,7 +39,7 @@
             }
             button{
                 padding: 10px 15px;
-                background-color: purple;
+                background-color: $primary-pink;
                 color: #fff;
                 border: none;
                 border-radius: 5px;            
@@ -46,10 +49,10 @@
 
     
     &.odd{
-        background-color: #f4f4f4;
+        background-color: $coral;
     }
     &.even{
-        background-color: #e2dddd;
+        background-color:$primary-gold;
 
         .similar-product-container{
             .image{

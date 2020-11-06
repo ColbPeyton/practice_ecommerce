@@ -12,7 +12,7 @@ import {
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import HomePage from './components/pages/HomePage';
@@ -35,7 +35,7 @@ function App(props) {
   return (
     <div className="App">
     <Router >
-        {/* <ScrollToTop /> */}
+        <ScrollToTop />
           <Header routes={routes}/>
               <Switch>
                 {/* <Route component={} path='/category' />

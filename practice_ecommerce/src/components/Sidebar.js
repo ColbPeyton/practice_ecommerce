@@ -29,20 +29,20 @@ function Sidebar(props){
     return(
         <div className={`sidebar ${active ? 'active' : 'not-active'}`} style={ {animation: `${active ? "slideInSide" : "slideOutSide"} 0.5s forwards`} }>
             <div className='sidebar-container' style={{top: 0}}>
-                <div className='sidebar-logo'>
+                {/* <div className='sidebar-logo'>
                     <NavLink className='link' to='/' onClick={() => disable()}>
                         <img src={icon} alt='Home icon'/>
                     </NavLink> 
-                </div>
+                </div> */}
                 <div className='sidebar-searchbar'>
                     <SearchBar />
                 </div>
                 <div className='sidebar-container-links'>
-                    {/* <nav>
+                    <nav>
                         <ul>
                             {props.routes.map((route, index) => <li onClick={()=> disable()} key={index}>{route}</li> )}
                         </ul>
-                    </nav> */}
+                    </nav>
                 </div>
  
             </div>

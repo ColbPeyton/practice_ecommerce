@@ -1,71 +1,138 @@
 import importImages from '../_helpers/importImages';
 
 
-const images = importImages(require.context('../assets/images', false, /\.(png|jpe?g|svg)$/));
+const prints = importImages(require.context('../assets/images/Prints', false, /\.(png|jpe?g|svg)$/));
+const stickers = importImages(require.context('../assets/images/Stickers', false, /\.(png|jpe?g|svg)$/));
 
 
-const productData = [
+export const printData = [
     {
-        name: 'Test 1',
-        price: 5.00,
-        img: [images[0],images[1],images[0],],
-        id: 23145
+        name: 'Dogwarts - Griffindog',
+        price: 20.00,
+        img: [prints[0], prints[1]],
+        id: 10001
     },
     {
-        name: 'Test 2',
+        name: 'Dogwarts - Hufflepup',
+        price: 20.00,
+        img: [prints[2],prints[3]],
+        id: 10002
+    },
+    {
+        name: 'Dogwarts - Ravenpaw',
+        price: 20.00,
+        img: [prints[4],prints[5]],
+        id: 10003
+    },
+    {
+        name: 'Dogwarts - Snifferin',
+        price: 20.00,
+        img: [prints[6],prints[7]],
+        id: 10004
+    },
+ 
+]
+export const stickerData = [
+    {
+        name: 'Skater',
         price: 2.00,
-        img: [images[1]],
-        id: 12234
+        img: [stickers[0], stickers[1]],
+        id: 20001
     },
     {
-        name: 'Test 3',
-        price: 5.00,
-        img: [images[0]],
-        id: 54672
-    },
-    {
-        name: 'Test 4',
+        name: 'Kimchi',
         price: 2.00,
-        img: [images[1]],
-        id: 45875
+        img: [stickers[2], stickers[3], stickers[4]],
+        id: 20002
     },
     {
-        name: 'Test 5',
-        price: 5.00,
-        img: [images[0]],
-        id: 54672
-    },
-    {
-        name: 'Test 6',
+        name: 'Pug',
         price: 2.00,
-        img: [images[1]],
-        id: 54785
+        img: [stickers[5]],
+        id: 20003
     },
     {
-        name: 'Test 7',
-        price: 5.00,
-        img: [images[0]],
-        id: 69854
-    },
-    {
-        name: 'Test 8',
+        name: 'Bloom Where You\'re planted',
         price: 2.00,
-        img: [images[1]],
-        id: 25463
+        img: [stickers[6]],
+        id: 20004
     },
     {
-        name: 'Test 9',
-        price: 5.00,
-        img: [images[0]],
-        id: 34852
-    },
-    {
-        name: 'Test 10',
+        name: 'Plant',
         price: 2.00,
-        img: [images[1]],
-        id: 15789
+        img: [stickers[7]],
+        id: 20005
     },
+    {
+        name: 'Make Life Sweeter',
+        price: 2.00,
+        img: [stickers[8], stickers[9]],
+        id: 20006
+    },
+
 ]
 
 
-export default productData;
+export const completeData = [
+    {
+        name: 'Dogwarts - Griffindog',
+        price: 20.00,
+        img: [prints[0], prints[1]],
+        id: 10001
+    },
+    {
+        name: 'Dogwarts - Hufflepup',
+        price: 20.00,
+        img: [prints[2],prints[3]],
+        id: 10002
+    },
+    {
+        name: 'Dogwarts - Ravenpaw',
+        price: 20.00,
+        img: [prints[4],prints[5]],
+        id: 10003
+    },
+    {
+        name: 'Dogwarts - Snifferin',
+        price: 20.00,
+        img: [prints[6],prints[7]],
+        id: 10004
+    },
+    {
+        name: 'Skater',
+        price: 2.00,
+        img: [stickers[0], stickers[1]],
+        id: 20001
+    },
+    {
+        name: 'Kimchi',
+        price: 2.00,
+        img: [stickers[2], stickers[3], stickers[4]],
+        id: 20002
+    },
+    {
+        name: 'Pug',
+        price: 2.00,
+        img: [stickers[5]],
+        id: 20003
+    },
+    {
+        name: 'Bloom Where You\'re planted',
+        price: 2.00,
+        img: [stickers[6]],
+        id: 20004
+    },
+    {
+        name: 'Plant',
+        price: 2.00,
+        img: [stickers[7]],
+        id: 20005
+    },
+    {
+        name: 'Make Life Sweeter',
+        price: 2.00,
+        img: [stickers[8], stickers[9]],
+        id: 20006
+    },
+]
+

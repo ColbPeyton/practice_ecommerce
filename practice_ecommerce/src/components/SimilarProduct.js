@@ -1,13 +1,11 @@
 import React,{useState, useEffect} from 'react';
 import { connect } from 'react-redux'
 
-
-import img from '../assets/images/placeholderProductImage.jpg';
-
 import '../styles/SimilarProduct.scss';
 
 function SimilarProduct(props){
 
+    console.log(props)
     const [clicked, setClicked] = useState(false);
 
     // Check if product is located in cart. Will update button text 
@@ -39,7 +37,7 @@ function SimilarProduct(props){
         <div className={`similar-product ${renderLayout()}`}>
             <div className='similar-product-container'>
                 <div className='image'>
-                    <img src={img} alt={'placeholder'} />
+                    <img src={props.item.img[0].default} alt={props.item.name} />
                 </div>
                 <div className='info'>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

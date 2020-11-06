@@ -1,10 +1,11 @@
+@import './Colors';
 .cart{
     height: 100%;
     width: 260px;
     position: absolute;
     top: 75px;
     z-index: 100;
-    background: #f4f4f4;
+    background:$primary-pink;
     overflow: hidden;
     // transition: all 500ms ease-in-out;
     &.active{
@@ -24,8 +25,8 @@
         flex-direction: column;
         align-items: flex-start;
         transition: top ease;
-        background: #fff;
-        }
+        background:$primary-pink;
+    }
 
     .sidebar-container-links{
         height: 476px;
@@ -55,7 +56,7 @@
                     width: 100%;
                     max-width: 260px;
 
-                    color: #333;  
+                    color: #fff;  
                     letter-spacing: 1px;
                     text-decoration: none;
                     display: flex;
@@ -63,12 +64,12 @@
                     align-items: center;
                     padding-left: 10px;
                     &:visited{
-                        color: #333;
+                        color: #fff;
                         text-decoration: none;
                     }
                     &:hover{
-                        background-color: #333;
-                        color: #333;
+                        background-color: #fff;
+                        color: #fff;
                     }
 
                 }

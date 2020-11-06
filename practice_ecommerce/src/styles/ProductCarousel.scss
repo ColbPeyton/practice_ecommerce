@@ -1,3 +1,5 @@
+@import './Colors';
+
 .product-carousel{
     width: 100%;
     height: 100%;
@@ -18,10 +20,11 @@
         .controls{
             width: 100%;
             height: 15%;
+            min-height: 35px;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            background-color: rgba(51, 51, 51, 0.829);
+            background-color: $purple-dark;
 
             .arrow{
                 width: 25%;
@@ -33,7 +36,7 @@
                     border: none;
                     color: #fff;
                     background-color: transparent;
-                    font-size: 1.75rem;
+                    font-size: 1.5rem;
                 }
             }
 
@@ -51,9 +54,9 @@
                 
                 i{
                     padding: 0px 2px;
-
+                    color: #803531;
                     &.active{
-                        color: #fff
+                        color: $primary-pink;
                     }
                 }
             }
