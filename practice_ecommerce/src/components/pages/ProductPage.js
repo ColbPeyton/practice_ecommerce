@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 
 import { connect } from 'react-redux'
 import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart, currentItem} from '../../redux/actions/actions';
@@ -8,21 +8,37 @@ import ProductCarousel from '../ProductCarousel';
 
 import img from '../../assets/images/placeholderProductImage.jpg';
 
-
+// Helpers
+import {findItem, getIDFromPath, checkIfProductPath} from '../../_helpers/findItem';
 
 import '../../styles/ProductPage.scss';
 
 function ProductPage(props){
+
+    const [viewedItem, setViewedItem] = useState(props.item);
+    const path = useRef(getIDFromPath(window.location.href));
+
+    useEffect(()=>{
+        if(props.item.id !== path.current[0]){
+            console.log('yes', props.item.id, viewedItem)
+            setViewedItem(findItem(path.current[0]));
+        }else{
+            console.log('no', props.item.id, viewedItem)
+
+            setViewedItem(props.item)
+        }
+    }, [checkIfProductPath(window.location.href)], path)
+
 
     return(
         <main className='product-page'>
            <div className='product-container'>
                <div className='product'>
                     <div className='img'>
-                    <img src={props.item.img[0].default} alt={props.item.name} />
+                    <img src={viewedItem.img[0].default} alt={viewedItem.name} />
                 </div>
                     <div className='name'>
-                        <h2>{props.item.name}</h2>
+                        <h2>{viewedItem.name}</h2>
                     </div>
                     <div className='desc'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum eleifend purus, 
@@ -31,7 +47,7 @@ function ProductPage(props){
                     </div>
                </div>
                 <div className='cart-option'>
-                    <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id);}}>Add To Cart</button>
+                    <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id);}}>Add To Cart</button>
                 </div>
            </div> 
 
