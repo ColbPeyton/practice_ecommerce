@@ -131,7 +131,7 @@ export const completeData = [
     {
         name: 'Make Life Sweeter',
         price: 2.00,
-        img: [stickers[8], stickers[9]],
+        img: [stickers[9], stickers[8]],
         id: 20006
     },
 ]

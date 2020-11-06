@@ -5,7 +5,7 @@ import '../styles/SimilarProduct.scss';
 
 function SimilarProduct(props){
 
-    console.log(props)
+    // console.log(props)
     const [clicked, setClicked] = useState(false);
 
     // Check if product is located in cart. Will update button text 

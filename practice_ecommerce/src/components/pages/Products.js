@@ -15,11 +15,12 @@ function Products(props){
                     style={
                         {
                             backgroundImage: `url(${product.img[0].default})`,
-                            backgroundSize: 'cover'
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center center'
                         }
                     }>
                         <div className='product-item' >
-                            {product.name}
+                            {/* {product.name} */}
                         </div>
                         
                 </button>
