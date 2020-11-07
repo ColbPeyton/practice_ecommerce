@@ -42,7 +42,7 @@ function Products(props){
     // }
 
     function updateCurrentAndLoadProductPage(product){
-        props.currentItem(product.name, product.id, product.img, product.price );
+        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details );
         props.history.push(`/products/${product.id}`);
     }
     return(

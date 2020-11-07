@@ -40,7 +40,7 @@ function SimilarProduct(props){
                     <img src={props.item.img[0].default} alt={props.item.name} />
                 </div>
                 <div className='info'>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>{props.item.desc}</p>
                    {renderButton()}
                 </div>
             </div>

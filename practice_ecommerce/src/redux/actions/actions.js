@@ -8,7 +8,7 @@ export const addItemToCart = (name, quanity, id, price) =>{
             name,
             quanity,
             id,
-            price
+            price,
         }
     };
 };
@@ -46,14 +46,16 @@ export const removeItemQuanityFromCart = (name, quanity, id) =>{
 }
 
 
-export const currentItem = (name, id, img, price) => {
+export const currentItem = (name, id, img, price, desc, details) => {
     return{
         type: CURRENT_ITEM,
         payload:{
             name,
             id,
             img,
-            price
+            price,
+            desc,
+            details,
         }
     }
 }

@@ -52,7 +52,6 @@ function ProductPage(props){
             }
         }))
     }
-
     return(
         <main className='product-page'>
            <div className='product-container'>
@@ -72,9 +71,7 @@ function ProductPage(props){
                         <h3>{viewedItem.price}</h3>
                     </div>
                     <div className='desc'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum eleifend purus, 
-                        vitae convallis mi ultricies a. Maecenas mollis, mi eget pellentesque consequat, sapien nisi 
-                        interdum neque, eget porta erat augue vitae nunc.</p>
+                        <p>{viewedItem.desc}</p>
                     </div>
                </div>
                 <div className='cart-option'>

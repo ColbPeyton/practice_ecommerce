@@ -7,7 +7,9 @@ const INITIAL_STATE = {
         name: '',
         id: 0,
         img: '',
-        price: 0
+        price: 0,
+        desc: '',
+        details: []
     }
   };
 
