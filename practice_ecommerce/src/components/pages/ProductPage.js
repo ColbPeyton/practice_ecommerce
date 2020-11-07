@@ -17,6 +17,7 @@ function ProductPage(props){
     const [viewedItem, setViewedItem] = useState(props.item);
     const path = useRef(getIDFromPath(window.location.href));
     const [clicked, setClicked] = useState(false);
+    const [currentImage, setCurrentImage] = useState(viewedItem.img[0].default)
 
     useEffect(()=>{
         if(props.item.id !== path.current[0]){
@@ -44,14 +45,25 @@ function ProductPage(props){
         : <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id, viewedItem.price);}}>Add To Cart</button>
     }
 
-
+    function renderExtraImages(){
+        return viewedItem.img.map(((item,index) => {
+            if(item.default !== currentImage){
+                return <div className='extra-small' key={index} onClick={()=>setCurrentImage(item.default)}><img src={item.default} alt={viewedItem.name}/></div>
+            }
+        }))
+    }
 
     return(
         <main className='product-page'>
            <div className='product-container'>
                <div className='product'>
-                    <div className='img'>
-                    <img src={viewedItem.img[0].default} alt={viewedItem.name} />
+                    <div className='img-display'>
+                        <div className='img-container'>
+                            <img src={currentImage} alt={viewedItem.name} />
+                        </div>
+                        <div className='img-extra'>
+                            {renderExtraImages()}
+                        </div>
                 </div>
                     <div className='name'>
                         <h2>{viewedItem.name}</h2>

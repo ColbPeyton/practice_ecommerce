@@ -22,15 +22,35 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            
-            .img{
+            .img-display{
                 height: 65%;
                 width: 90%;
-                img{
-                    max-width: 100%;
-                    height: auto;
+                .img-container{
+                    height: 60%;
+                    width: 100%;
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                    }
                 }
+                .img-extra{
+                    height: 5%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    .extra-small{
+                        height: 100%;
+                        width: 15%;
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+
             }
+           
             .name{
                 height: 10%;
                 width: 90%;
