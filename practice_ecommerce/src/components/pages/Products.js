@@ -1,16 +1,19 @@
-import React from 'react';
+import React,{useState, useRef} from 'react';
 import { connect } from 'react-redux'
 
 import {currentItem} from '../../redux/actions/actions';
-import {completeData} from '../../_data/products';
+import {completeData, printData, stickerData} from '../../_data/products';
 
 
 import '../../styles/Products.scss';
 
 function Products(props){
 
-    function renderProducts(){
-        return completeData.map((product, index) => {
+    const [catagory, setCatagory] = useState(completeData);
+    // const products = useRef(renderProducts())
+
+    function renderProducts(catagory){
+        return catagory.map((product, index) => {
             return <button onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
                     style={
                         {
@@ -27,6 +30,17 @@ function Products(props){
         })
     }
 
+    // function updateStylingCatagory(){
+    //     switch(catagory){
+    //         case printData:
+    //             return 'print';
+    //         case stickerData:
+    //             return 'sticker'
+    //         default:
+    //             return 'all'
+    //     }
+    // }
+
     function updateCurrentAndLoadProductPage(product){
         props.currentItem(product.name, product.id, product.img, product.price );
         props.history.push(`/products/${product.id}`);
@@ -35,8 +49,13 @@ function Products(props){
         <main className='products'>
             <div className='products-container'>
             <div className='product-title'>All Products</div>
+            <div className='catagories'>
+                <button onClick={() => setCatagory(printData)}>Prints</button>
+                <button onClick={() => setCatagory(stickerData)}>Stickers</button>
+                <button onClick={() => setCatagory(completeData)}>All</button>
+            </div>
             <div className='products-listed'>
-                {renderProducts()}
+                {renderProducts(catagory)}
             </div>
             </div>
         </main>

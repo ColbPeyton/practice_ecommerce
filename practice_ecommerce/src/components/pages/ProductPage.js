@@ -6,7 +6,6 @@ import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuan
 import SimilarProduct from '../SimilarProduct';
 import ProductCarousel from '../ProductCarousel';
 
-import img from '../../assets/images/placeholderProductImage.jpg';
 
 // Helpers
 import {findItem, getIDFromPath, checkIfProductPath, randomProduct} from '../../_helpers/findItem';
