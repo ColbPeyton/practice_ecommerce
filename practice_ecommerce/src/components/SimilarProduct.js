@@ -25,8 +25,8 @@ function SimilarProduct(props){
 
     function renderButton(){
         return clicked
-        ? <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id);}}>Add Another!</button>
-        : <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id);}}>Add To Cart</button>
+        ? <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id, props.item.price);}}>Add Another!</button>
+        : <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id, props.item.price);}}>Add To Cart</button>
 
     }
 

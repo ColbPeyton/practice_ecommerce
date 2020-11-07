@@ -16,18 +16,34 @@ function ProductPage(props){
 
     const [viewedItem, setViewedItem] = useState(props.item);
     const path = useRef(getIDFromPath(window.location.href));
+    const [clicked, setClicked] = useState(false);
 
     useEffect(()=>{
         if(props.item.id !== path.current[0]){
-            console.log('yes', props.item.id, viewedItem)
+            // console.log('yes', props.item.id, viewedItem)
             setViewedItem(findItem(path.current[0]));
 
         }else{
-            console.log('no', props.item.id, viewedItem)
+            // console.log('no', props.item.id, viewedItem)
 
             setViewedItem(props.item)
         }
     }, [checkIfProductPath(window.location.href)], path)
+
+    // Check if product is located in cart. Will update button text 
+    useEffect(()=>{
+        function checkIfInCart(){
+            return props.cart.some(item => item.id === props.item.id);
+        }
+        setClicked(checkIfInCart())
+    },[props.cart, viewedItem.id])
+
+    function renderButton(){
+        return clicked
+        ? <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id, viewedItem.price);}}>Add Another!</button>
+        : <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id, viewedItem.price);}}>Add To Cart</button>
+    }
+
 
 
     return(
@@ -50,7 +66,7 @@ function ProductPage(props){
                     </div>
                </div>
                 <div className='cart-option'>
-                    <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id);}}>Add To Cart</button>
+                    {renderButton()}
                 </div>
            </div> 
 
