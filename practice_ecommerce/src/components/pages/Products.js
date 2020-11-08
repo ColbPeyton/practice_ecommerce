@@ -14,18 +14,14 @@ function Products(props){
 
     function renderProducts(catagory){
         return catagory.map((product, index) => {
-            return <button onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
+            return <button className='product-item' onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
                     style={
                         {
                             backgroundImage: `url(${product.img[0].default})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center center'
                         }
-                    }>
-                        <div className='product-item' >
-                            {/* {product.name} */}
-                        </div>
-                        
+                    }>  
                 </button>
         })
     }
@@ -45,16 +41,34 @@ function Products(props){
         props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details );
         props.history.push(`/products/${product.id}`);
     }
+
+    function renderActiveButton(id){
+        return id === catagory
+        ? 'active'
+        : '';
+    }
+
+    function updateGridSizing(){
+        switch(catagory){
+            case stickerData:
+                return 'sticker';
+            case printData:
+                return 'print';
+            default:
+                return 'all'
+        }
+    }
+
     return(
         <main className='products'>
             <div className='products-container'>
             <div className='product-title'>All Products</div>
             <div className='catagories'>
-                <button onClick={() => setCatagory(printData)}>Prints</button>
-                <button onClick={() => setCatagory(stickerData)}>Stickers</button>
-                <button onClick={() => setCatagory(completeData)}>All</button>
+                <button className={`${renderActiveButton(completeData)}`} onClick={() => setCatagory(completeData)}>All</button>
+                <button className={`${renderActiveButton(printData)}`} onClick={() => setCatagory(printData)}>Prints</button>
+                <button className={`${renderActiveButton(stickerData)}`} onClick={() => setCatagory(stickerData)}>Stickers</button>
             </div>
-            <div className='products-listed'>
+            <div className={`products-listed ${updateGridSizing()}`}>
                 {renderProducts(catagory)}
             </div>
             </div>

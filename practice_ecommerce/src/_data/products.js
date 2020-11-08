@@ -50,9 +50,22 @@ export const printData = [
 ]
 export const stickerData = [
     {
+        name: 'Biden Sticker Pack',
+        price: 5.50,
+        img: [stickers[0], stickers[1], stickers[2], stickers[3], stickers[4]],
+        id: 20046,
+        desc:'An election 2020 sticker set supporting Joe Biden. Buy the pack or just one sticker. Show your support by placing these stickers on your laptop, notebook, and more!',
+        details:[
+                'Sticker Pack Contains: Shades, Go Joe Go, Blue Wave, and No Malarkey',
+                'Dimensions: 2" x 2"', 
+                'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
+                'Colors may vary from screen to screen.'
+            ]
+    },
+    {
         name: 'Rock and Rollerskate Glossy Sticker',
         price: 1.99,
-        img: [stickers[0], stickers[1]],
+        img: [stickers[5], stickers[6]],
         id: 20001,
         desc:'Rock and roll with this cute rollerskater sticker! This sticker makes a unique addition to laptops, journals, and more!',
         details:[
@@ -64,7 +77,7 @@ export const stickerData = [
     {
         name: 'Spicy Lil\' Kimchi Glossy Sticker',
         price: 1.99,
-        img: [stickers[2], stickers[3], stickers[4]],
+        img: [stickers[7], stickers[8], stickers[9]],
         id: 20002,
         desc:'Are you a little on the spicy side? Show it off with this sassy kimchi sticker. Perfect for journals, notebooks, laptops, and more!',
         details:[
@@ -77,7 +90,7 @@ export const stickerData = [
     {
         name: 'Snug as a Pug Glossy Sticker',
         price: 2.00,
-        img: [stickers[5]],
+        img: [stickers[10]],
         id: 20003,
         desc:'Cold weather means more blanket snuggles! Be like this happy pug and stay warm this winter! This sticker is perfect for decorating laptops, planners/bullet journals, and more!',
         details:[
@@ -89,7 +102,7 @@ export const stickerData = [
     {
         name: 'Plant Lover Stickers | Eco-Friendly Sticker Set',
         price: 2.00,
-        img: [stickers[6], stickers[7]],
+        img: [stickers[11], stickers[12], stickers[13]],
         id: 20004,
         desc:'Are you a proud plant parent? If you\'ve decorated your house with plants, why not your notebook, planner, or laptop?',
         details:[
@@ -101,7 +114,7 @@ export const stickerData = [
     {
         name: 'Make Life Sweeter',
         price: 2.00,
-        img: [stickers[8], stickers[9]],
+        img: [stickers[14], stickers[15]],
         id: 20005,
         desc:'Make your life a little sweeter with this adorable sticker! Remind yourself to stay positive by placing this on your laptop or journal.',
         details:[
