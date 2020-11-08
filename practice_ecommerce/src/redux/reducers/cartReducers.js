@@ -85,7 +85,8 @@ const updateCurrentItem = (state= INITIAL_STATE, action) =>{
             name: action.payload.name, 
             id: action.payload.id, 
             img: action.payload.img,
-            price: action.payload.price 
+            price: action.payload.price,
+            details: action.payload.details 
         }
     }
 }

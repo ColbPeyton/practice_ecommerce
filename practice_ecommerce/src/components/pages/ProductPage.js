@@ -52,6 +52,12 @@ function ProductPage(props){
             }
         }))
     }
+
+    function renderProductDetails(){
+        return viewedItem.details.map((det, index) => {
+            return <p key={index}>{det}</p>
+        })
+    }
     return(
         <main className='product-page'>
            <div className='product-container'>
@@ -68,10 +74,13 @@ function ProductPage(props){
                         <h2>{viewedItem.name}</h2>
                     </div>
                     <div className='price'>
-                        <h3>{viewedItem.price}</h3>
+                        <h3>${viewedItem.price}</h3>
                     </div>
                     <div className='desc'>
                         <p>{viewedItem.desc}</p>
+                    </div>
+                    <div className='details'>
+                        {renderProductDetails()}
                     </div>
                </div>
                 <div className='cart-option'>

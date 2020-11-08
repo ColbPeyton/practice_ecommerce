@@ -21,14 +21,15 @@
             align-items: center;
         }
         .catagories{
-            height: 5vh;
+            height: 10vh;
+            max-height: 35px;
             width: 100%;
             display: flex;
             justify-content: space-around;
             align-items: center;
             background-color: $primary-pink;
             button{
-                width: 33%;
+                width: 34%;
                 height: 100%;
                 text-align: center;
                 font-weight: 600;

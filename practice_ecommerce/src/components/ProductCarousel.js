@@ -10,10 +10,10 @@ function ProductCarousel(props){
 
     useEffect(()=>{
         if(cycle){
-            const id = setTimeout(()=> cycleRight(), 4000);
+            const id = setTimeout(()=> cycleRight(), 6000);
             return () => clearTimeout(id);
         }else{
-            const id = setTimeout(()=> setCycle(true), 4000);
+            const id = setTimeout(()=> setCycle(true), 6000);
             return () => clearTimeout(id);
         }
     }, [index, cycle])
@@ -47,7 +47,7 @@ function ProductCarousel(props){
     function renderCurrentPosition(){
         return props.products.map((el, pos) => {
             return <button key={pos} onClick={()=>{setIndex(pos)}}>
-                        <i className={`fas fa-circle ${index >= pos ? 'active' : ''}`} ></i>
+                        <i className={`fas fa-circle ${index === pos ? 'active' : ''}`} ></i>
                     </button>
         })
     }
