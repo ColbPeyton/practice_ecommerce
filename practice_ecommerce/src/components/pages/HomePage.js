@@ -9,7 +9,7 @@ import '../../styles/HomePage.scss';
 
 
 // images
-import banner from '../../assets/images/Branding/Etsy Banner 2-02.jpg';
+import banner from '../../assets/images/Branding/Hero_mobile.jpg';
 
 function HomePage(props){
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import {currentItem} from '../../redux/actions/actions';
 import {completeData, printData, stickerData} from '../../_data/products';
 
+import banner from '../../assets/images/Branding/Products_Banner.jpg';
 
 import '../../styles/Products.scss';
 
@@ -61,8 +62,11 @@ function Products(props){
 
     return(
         <main className='products'>
+
             <div className='products-container'>
-            <div className='product-title'>All Products</div>
+            <div className='banner'>
+                   <img src={banner} alt='product banner' />
+               </div>
             <div className='catagories'>
                 <button className={`${renderActiveButton(completeData)}`} onClick={() => setCatagory(completeData)}>All</button>
                 <button className={`${renderActiveButton(printData)}`} onClick={() => setCatagory(printData)}>Prints</button>
