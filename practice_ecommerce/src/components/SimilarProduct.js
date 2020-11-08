@@ -1,54 +1,44 @@
-import React,{useState, useEffect} from 'react';
-import { connect } from 'react-redux'
+import React from 'react';
 
 import '../styles/SimilarProduct.scss';
 
 function SimilarProduct(props){
 
     // console.log(props)
-    const [clicked, setClicked] = useState(false);
+    // const [clicked, setClicked] = useState(false);
 
-    // Check if product is located in cart. Will update button text 
-    useEffect(()=>{
-        function checkIfInCart(){
-            return props.cart.some(item => item.id === props.item.id);
-        }
-        setClicked(checkIfInCart())
-    },[props.cart, props.item.id])
+    // // Check if product is located in cart. Will update button text 
+    // useEffect(()=>{
+    //     function checkIfInCart(){
+    //         return props.cart.some(item => item.id === props.item.id);
+    //     }
+    //     setClicked(checkIfInCart())
+    // },[props.cart, props.item.id])
 
-
-    function renderLayout(){
-        return props.position 
-        ? 'odd'
-        : 'even'
+    function renderImage(){
+        return props.item.promo === ''
+        ? props.item.img[0].default
+        : props.item.promo.default
     }
 
-    function renderButton(){
-        return clicked
-        ? <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id, props.item.price);}}>Add Another!</button>
-        : <button onClick={()=> { props.addItemToCart(props.item.name, 1 , props.item.id, props.item.price);}}>Add To Cart</button>
 
+    function updateCurrentAndLoadProductPage(product){
+        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details, product.promo );
+        props.updatePath(`/products/${product.id}`);
     }
-
-   
-
-
     return(
-        <div className={`similar-product ${renderLayout()}`}>
+        <div className={`similar-product`}>
             <div className='similar-product-container'>
                 <div className='image'>
-                    <img src={props.item.img[0].default} alt={props.item.name} />
+                    <img src={renderImage()} alt={props.item.name} />
                 </div>
                 <div className='info'>
                     <p>{props.item.name}</p>
-                   {renderButton()}
+                    <button onClick={()=> {updateCurrentAndLoadProductPage(props.item);}}>View!</button>
                 </div>
             </div>
         </div>
     );
 }
-const mapStateToProps = state => {
-    return { cart: state.cart};
-  };
 
-export default connect(mapStateToProps)(SimilarProduct);
+export default SimilarProduct;

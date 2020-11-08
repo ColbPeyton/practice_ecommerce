@@ -38,7 +38,7 @@ function Products(props){
     // }
 
     function updateCurrentAndLoadProductPage(product){
-        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details );
+        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details, product.promo );
         props.history.push(`/products/${product.id}`);
     }
 

@@ -3,6 +3,9 @@ import React, {useEffect, useState, useRef} from 'react';
 import { connect } from 'react-redux'
 import { addItemToCart, addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart, currentItem} from '../../redux/actions/actions';
 
+import { withRouter} from 'react-router-dom';
+
+
 import SimilarProduct from '../SimilarProduct';
 import ProductCarousel from '../ProductCarousel';
 
@@ -17,19 +20,21 @@ function ProductPage(props){
     const [viewedItem, setViewedItem] = useState(props.item);
     const path = useRef(getIDFromPath(window.location.href));
     const [clicked, setClicked] = useState(false);
-    const [currentImage, setCurrentImage] = useState(viewedItem.img[0].default)
+    const [currentImage, setCurrentImage] = useState(props.item.img[0].default)
 
     useEffect(()=>{
         if(props.item.id !== path.current[0]){
             // console.log('yes', props.item.id, viewedItem)
             setViewedItem(findItem(path.current[0]));
-
         }else{
             // console.log('no', props.item.id, viewedItem)
-
             setViewedItem(props.item)
         }
-    }, [checkIfProductPath(window.location.href)], path)
+    }, [checkIfProductPath(window.location.href), path])
+
+    useEffect(()=>{
+        setCurrentImage(viewedItem.img[0].default)
+    }, [viewedItem])
 
     // Check if product is located in cart. Will update button text 
     useEffect(()=>{
@@ -57,6 +62,10 @@ function ProductPage(props){
         return viewedItem.details.map((det, index) => {
             return <p key={index}>{det}</p>
         })
+    }
+
+    function updatePath(path){
+        props.history.push(`${path}`);
     }
     return(
         <main className='product-page'>
@@ -94,10 +103,10 @@ function ProductPage(props){
             </div>
             <div className='products'>
                 <ProductCarousel products={[
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={randomProduct(viewedItem.id)}/>,
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={randomProduct(viewedItem.id)}/>,
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={true} item={randomProduct(viewedItem.id)}/>,
-                    <SimilarProduct addItemToCart={props.addItemToCart} position={false} item={randomProduct(viewedItem.id)}/>,
+                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={true} item={randomProduct(viewedItem.id)}/>,
+                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={false} item={randomProduct(viewedItem.id)}/>,
+                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={true} item={randomProduct(viewedItem.id)}/>,
+                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={false} item={randomProduct(viewedItem.id)}/>,
                 ]}
                 />
             </div>
@@ -121,7 +130,7 @@ export default connect(
         removeItemQuanityFromCart,
         currentItem
      }
-  )(ProductPage)
+  )(withRouter(ProductPage))
 
 
 

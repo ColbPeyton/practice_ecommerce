@@ -3,6 +3,7 @@ import importImages from '../_helpers/importImages';
 
 const prints = importImages(require.context('../assets/images/Prints', false, /\.(png|jpe?g|svg)$/));
 const stickers = importImages(require.context('../assets/images/Stickers', false, /\.(png|jpe?g|svg)$/));
+const promo = importImages(require.context('../assets/images/Promo', false, /\.(png|jpe?g|svg)$/));
 
 
 export const printData = [
@@ -14,7 +15,8 @@ export const printData = [
         desc: 'Accio artwork! Are you the proud parent of a Griffindog, or a proud Griffindor yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
     {
         name: 'Hufflepup Printable Poster',
@@ -24,7 +26,8 @@ export const printData = [
         desc: 'Accio artwork! Are you the proud parent of a Hufflepup, or a proud Hufflepuff yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
     {
         name: 'Ravenpaw Printable Artwork',
@@ -34,7 +37,8 @@ export const printData = [
         desc: 'Accio artwork! Are you the proud parent of a Ravenpaw, or a proud Ravenclaw yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
     {
         name: 'Snifferin Printable Artwork',
@@ -44,7 +48,8 @@ export const printData = [
         desc: 'Accio artwork! Are you the proud parent of a Snifferin, or a proud Slytherin yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
  
 ]
@@ -60,7 +65,8 @@ export const stickerData = [
                 'Dimensions: 2" x 2"', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+            promo:''
     },
     {
         name: 'Rock and Rollerskate Glossy Sticker',
@@ -72,7 +78,8 @@ export const stickerData = [
                 'Dimensions: 2" x 2" glossy white round sticker.', 
                 'This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+        promo:promo[1]
     },
     {
         name: 'Spicy Lil\' Kimchi Glossy Sticker',
@@ -85,7 +92,8 @@ export const stickerData = [
                 'Available in 3 colors: blue, yellow, and pink', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+            promo:''
     },
     {
         name: 'Snug as a Pug Glossy Sticker',
@@ -97,7 +105,8 @@ export const stickerData = [
                 'Dimensions: 2" x 2"', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+        promo:promo[0]
     },
     {
         name: 'Plant Lover Stickers | Eco-Friendly Sticker Set',
@@ -109,7 +118,8 @@ export const stickerData = [
                 'Dimensions: Potted Plant: 3" x 3" | Bloom: 3.75" x 2"', 
                 'Printed on recycled kraft paper. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+            promo:''
     },
     {
         name: 'Make Life Sweeter',
@@ -121,7 +131,8 @@ export const stickerData = [
                 'Dimensions: 2" x 2"', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+        promo:promo[2]
     },
 
 ]
@@ -136,7 +147,8 @@ export const completeData = [
         desc: 'Accio artwork! Are you the proud parent of a Griffindog, or a proud Griffindor yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
     {
         name: 'Hufflepup Printable Poster',
@@ -146,7 +158,8 @@ export const completeData = [
         desc: 'Accio artwork! Are you the proud parent of a Hufflepup, or a proud Hufflepuff yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
     {
         name: 'Ravenpaw Printable Artwork',
@@ -156,7 +169,8 @@ export const completeData = [
         desc: 'Accio artwork! Are you the proud parent of a Ravenpaw, or a proud Ravenclaw yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
     {
         name: 'Snifferin Printable Artwork',
@@ -166,7 +180,8 @@ export const completeData = [
         desc: 'Accio artwork! Are you the proud parent of a Snifferin, or a proud Slytherin yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
-        ]
+        ],
+        promo:''
     },
     {
         name: 'Biden Sticker Pack',
@@ -179,7 +194,8 @@ export const completeData = [
                 'Dimensions: 2" x 2"', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+            promo:''
     },
     {
         name: 'Rock and Rollerskate Glossy Sticker',
@@ -191,7 +207,8 @@ export const completeData = [
                 'Dimensions: 2" x 2" glossy white round sticker.', 
                 'This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+        promo: promo[1]
     },
     {
         name: 'Spicy Lil\' Kimchi Glossy Sticker',
@@ -204,7 +221,8 @@ export const completeData = [
                 'Available in 3 colors: blue, yellow, and pink', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+            promo:''
     },
     {
         name: 'Snug as a Pug Glossy Sticker',
@@ -216,7 +234,9 @@ export const completeData = [
                 'Dimensions: 2" x 2"', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+        promo: promo[0]
+
     },
     {
         name: 'Plant Lover Stickers | Eco-Friendly Sticker Set',
@@ -228,7 +248,8 @@ export const completeData = [
                 'Dimensions: Potted Plant: 3" x 3" | Bloom: 3.75" x 2"', 
                 'Printed on recycled kraft paper. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+        promo:''
     },
     {
         name: 'Make Life Sweeter',
@@ -240,7 +261,8 @@ export const completeData = [
                 'Dimensions: 2" x 2"', 
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
-            ]
+            ],
+        promo:promo[2]
     },
 
 ]

@@ -78,7 +78,8 @@ import {
             img: '',
             price: 0,
             desc: '',
-            details: []
+            details: [],
+            promo: ''
         }
       };
     }

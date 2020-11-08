@@ -9,7 +9,8 @@ const INITIAL_STATE = {
         img: '',
         price: 0,
         desc: '',
-        details: []
+        details: [],
+        promo: ''
     }
   };
 
@@ -86,7 +87,8 @@ const updateCurrentItem = (state= INITIAL_STATE, action) =>{
             id: action.payload.id, 
             img: action.payload.img,
             price: action.payload.price,
-            details: action.payload.details 
+            details: action.payload.details,
+            promo: action.payload.promo
         }
     }
 }

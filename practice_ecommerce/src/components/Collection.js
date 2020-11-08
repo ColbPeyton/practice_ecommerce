@@ -22,7 +22,7 @@ function Collection(props){
     };
 
     function updateCurrentAndLoadProductPage(product){
-        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details );
+        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details, product.promo );
         props.updatePath(`/products/${product.id}`);
     }
 

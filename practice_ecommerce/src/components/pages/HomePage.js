@@ -14,7 +14,6 @@ import banner from '../../assets/images/Branding/Etsy Banner 2-02.jpg';
 function HomePage(props){
 
     function updatePath(path){
-        console.log(path)
         props.history.push(`${path}`);
     }
     
