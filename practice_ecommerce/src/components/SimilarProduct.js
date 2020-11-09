@@ -23,7 +23,7 @@ function SimilarProduct(props){
 
 
     function updateCurrentAndLoadProductPage(product){
-        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details, product.promo );
+        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details, product.promo, product.tags );
         props.updatePath(`/products/${product.id}`);
     }
     return(

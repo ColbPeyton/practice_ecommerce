@@ -1,3 +1,4 @@
+import { act } from 'react-dom/cjs/react-dom-test-utils.production.min';
 import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY, CURRENT_ITEM } from '../actions/actionTypes';
 
 
@@ -10,7 +11,8 @@ const INITIAL_STATE = {
         price: 0,
         desc: '',
         details: [],
-        promo: ''
+        promo: '',
+        tags: []
     }
   };
 
@@ -88,7 +90,8 @@ const updateCurrentItem = (state= INITIAL_STATE, action) =>{
             img: action.payload.img,
             price: action.payload.price,
             details: action.payload.details,
-            promo: action.payload.promo
+            promo: action.payload.promo,
+            tags: action.payload.tags
         }
     }
 }

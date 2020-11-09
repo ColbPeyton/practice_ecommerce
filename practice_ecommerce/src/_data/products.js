@@ -16,7 +16,8 @@ export const printData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo: promo[0]
+        promo: promo[0],
+        tags:['harry potter', 'eco-friendly']
     },
     {
         name: 'Hufflepup Printable Poster',
@@ -27,7 +28,8 @@ export const printData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo:promo[1]
+        promo:promo[1],
+        tags:['harry potter', 'eco-friendly']
     },
     {
         name: 'Ravenpaw Printable Artwork',
@@ -38,7 +40,8 @@ export const printData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo:promo[2]
+        promo:promo[2],
+        tags:['harry potter', 'eco-friendly']
     },
     {
         name: 'Snifferin Printable Artwork',
@@ -49,7 +52,8 @@ export const printData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo:promo[3]
+        promo:promo[3],
+        tags:['harry potter', 'eco-friendly']
     },
  
 ]
@@ -66,7 +70,8 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-            promo:promo[4]
+        promo:promo[4],
+        tags:['political', 'bundle']
     },
     {
         name: 'Rock and Rollerskate Glossy Sticker',
@@ -79,7 +84,8 @@ export const stickerData = [
                 'This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[11]
+        promo:promo[11],
+        tags:['']
     },
     {
         name: 'Spicy Lil\' Kimchi Glossy Sticker',
@@ -93,7 +99,8 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-            promo:promo[8]
+        promo:promo[8],
+        tags:['']
     },
     {
         name: 'Snug as a Pug Glossy Sticker',
@@ -106,7 +113,8 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[8]
+        promo:promo[8],
+        tags:['']
     },
     {
         name: 'Plant Lover Stickers | Eco-Friendly Sticker Set',
@@ -119,7 +127,8 @@ export const stickerData = [
                 'Printed on recycled kraft paper. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-            promo:promo[5]
+        promo:promo[5],
+        tags:['eco-friendly', 'bundle']
     },
     {
         name: 'Make Life Sweeter',
@@ -132,7 +141,8 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[13]
+        promo:promo[13],
+        tags:['']
     },
 
 ]
@@ -148,7 +158,8 @@ export const completeData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo: promo[0]
+        promo: promo[0],
+        tags:['harry potter', 'eco-friendly']
     },
     {
         name: 'Hufflepup Printable Poster',
@@ -159,7 +170,8 @@ export const completeData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo:promo[1]
+        promo:promo[1],
+        tags:['harry potter', 'eco-friendly']
     },
     {
         name: 'Ravenpaw Printable Artwork',
@@ -170,7 +182,8 @@ export const completeData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo:promo[2]
+        promo:promo[2],
+        tags:['harry potter', 'eco-friendly']
     },
     {
         name: 'Snifferin Printable Artwork',
@@ -181,7 +194,8 @@ export const completeData = [
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
-        promo:promo[3]
+        promo:promo[3],
+        tags:['harry potter', 'eco-friendly']
     },
     {
         name: 'Biden Sticker Pack',
@@ -195,7 +209,8 @@ export const completeData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-            promo:promo[4]
+        promo:promo[4],
+        tags:['political', 'bundle']
     },
     {
         name: 'Rock and Rollerskate Glossy Sticker',
@@ -208,7 +223,8 @@ export const completeData = [
                 'This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[11]
+        promo:promo[11],
+        tags:['']
     },
     {
         name: 'Spicy Lil\' Kimchi Glossy Sticker',
@@ -222,7 +238,8 @@ export const completeData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-            promo:promo[9]
+        promo:promo[8],
+        tags:['']
     },
     {
         name: 'Snug as a Pug Glossy Sticker',
@@ -235,12 +252,13 @@ export const completeData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[10]
+        promo:promo[8],
+        tags:['']
     },
     {
         name: 'Plant Lover Stickers | Eco-Friendly Sticker Set',
         price: 2.00,
-        img: [stickers[11], stickers[13], stickers[14]],
+        img: [stickers[11], stickers[12], stickers[13]],
         id: 20004,
         desc:'Are you a proud plant parent? If you\'ve decorated your house with plants, why not your notebook, planner, or laptop?',
         details:[
@@ -248,7 +266,8 @@ export const completeData = [
                 'Printed on recycled kraft paper. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-            promo:promo[5]
+        promo:promo[5],
+        tags:['eco-friendly', 'bundle']
     },
     {
         name: 'Make Life Sweeter',
@@ -261,7 +280,8 @@ export const completeData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[13]
+        promo:promo[13],
+        tags:['']
     },
 
 ]

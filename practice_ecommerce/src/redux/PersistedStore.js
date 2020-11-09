@@ -79,7 +79,8 @@ import {
             price: 0,
             desc: '',
             details: [],
-            promo: ''
+            promo: '',
+            tags: []
         }
       };
     }

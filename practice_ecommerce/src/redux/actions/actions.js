@@ -47,7 +47,7 @@ export const removeItemQuanityFromCart = (name, quanity, id) =>{
 }
 
 
-export const currentItem = (name, id, img, price, desc, details, promo) => {
+export const currentItem = (name, id, img, price, desc, details, promo, tags) => {
     return{
         type: CURRENT_ITEM,
         payload:{
@@ -57,7 +57,8 @@ export const currentItem = (name, id, img, price, desc, details, promo) => {
             price,
             desc,
             details,
-            promo
+            promo,
+            tags
         }
     }
 }

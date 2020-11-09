@@ -24,28 +24,56 @@
                 height: auto;
             }
         }
-        .catagories{
-            height: 10vh;
-            max-height: 35px;
+        .catagories-container{
+            height: 15vh;
+            max-height: 80px;
             width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            background-color: $primary-pink;
-            button{
-                width: 34%;
-                height: 100%;
-                text-align: center;
-                font-weight: 600;
-                border-radius: 0px;
-                padding: 0;
-                background-color: transparent;
-
-                &.active{
-                    background-color: $primary-gold;
+            .catagories{
+                height: 40%;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: $primary-pink;
+                button{
+                    width: 34%;
+                    height: 100%;
+                    text-align: center;
+                    font-weight: 600;
+                    border-radius: 0px;
+                    padding: 0;
+                    background-color: transparent;
+    
+                    &.active{
+                        background-color: $primary-gold;
+                    }
+    
                 }
-
             }
+            .filters{
+                height: 30%;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: $purple-dark;
+                button{
+                    width: 50%;
+                    height: 100%;
+                    text-align: center;
+                    font-weight: 600;
+                    border-radius: 0px;
+                    padding: 0;
+                    background-color: transparent;
+                    font-size: 0.9rem;
+    
+                    &.active{
+                        background-color: $purple-light;
+                    }
+    
+                }
+          }
+           
         }
 
         .products-listed{
@@ -65,6 +93,13 @@
             }
             &.print{
                 max-height: 300px;
+            }
+
+            &.bundle{
+                max-height: 300px;
+            }
+            &.eco-friendly{
+                max-height: 425px;
             }
 
             .product-item{

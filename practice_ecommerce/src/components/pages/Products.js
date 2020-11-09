@@ -11,11 +11,13 @@ import '../../styles/Products.scss';
 function Products(props){
 
     const [catagory, setCatagory] = useState(completeData);
+    const [filter, setFilter] = useState('');
     // const products = useRef(renderProducts())
 
     function renderProducts(catagory){
         return catagory.map((product, index) => {
-            return <button className='product-item' onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
+            if(!filter){
+                return <button className='product-item' onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
                     style={
                         {
                             backgroundImage: `url(${product.img[0].default})`,
@@ -24,6 +26,18 @@ function Products(props){
                         }
                     }>  
                 </button>
+            }
+            return product.tags.includes(filter)
+                ?<button className='product-item' onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
+                    style={
+                        {
+                            backgroundImage: `url(${product.img[0].default})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center center'
+                        }
+                    }>  
+                </button>
+                : ''
         })
     }
 
@@ -39,12 +53,12 @@ function Products(props){
     // }
 
     function updateCurrentAndLoadProductPage(product){
-        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details, product.promo );
+        props.currentItem(product.name, product.id, product.img, product.price, product.desc, product.details, product.promo, product.tags );
         props.history.push(`/products/${product.id}`);
     }
 
-    function renderActiveButton(id){
-        return id === catagory
+    function renderActive(id, active){
+        return id === active
         ? 'active'
         : '';
     }
@@ -60,6 +74,14 @@ function Products(props){
         }
     }
 
+    function updateFilter(el){
+        if(el === filter){
+            setFilter('')
+        }else{
+            setFilter(el)
+        }
+    }
+
     return(
         <main className='products'>
 
@@ -67,12 +89,19 @@ function Products(props){
             <div className='banner'>
                    <img src={banner} alt='product banner' />
                </div>
-            <div className='catagories'>
-                <button className={`${renderActiveButton(completeData)}`} onClick={() => setCatagory(completeData)}>All</button>
-                <button className={`${renderActiveButton(printData)}`} onClick={() => setCatagory(printData)}>Prints</button>
-                <button className={`${renderActiveButton(stickerData)}`} onClick={() => setCatagory(stickerData)}>Stickers</button>
+            <div className='catagories-container'>
+                <div className='catagories'>
+                    <button className={`${renderActive(completeData, catagory)}`} onClick={() => setCatagory(completeData)}>All</button>
+                    <button className={`${renderActive(printData, catagory)}`} onClick={() => setCatagory(printData)}>Prints</button>
+                    <button className={`${renderActive(stickerData, catagory)}`} onClick={() => setCatagory(stickerData)}>Stickers</button>
+                </div>
+                <div className='filters'>
+                    <button className={`${renderActive('bundle', filter)}`} onClick={() => updateFilter('bundle')}>Bundles</button>
+                    <button className={`${renderActive('eco-friendly', filter)}`} onClick={() => updateFilter('eco-friendly')}>Eco-Friendly</button>
+                </div>
             </div>
-            <div className={`products-listed ${updateGridSizing()}`}>
+
+            <div className={`products-listed ${updateGridSizing()} ${filter}`}>
                 {renderProducts(catagory)}
             </div>
             </div>
