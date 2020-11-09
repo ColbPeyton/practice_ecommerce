@@ -29,9 +29,9 @@ function Collection(props){
     return(
         <div className='collection'>
             <div className='container'>
-                <div className='title'>
+                {/* <div className='title'>
                     <h2>{props.name}</h2>
-                </div>
+                </div> */}
                 <div className='image-container'>
                     {renderProducts()}
                 </div>

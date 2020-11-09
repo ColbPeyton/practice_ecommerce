@@ -1,7 +1,7 @@
 import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY, CURRENT_ITEM} from "./actionTypes";
 
 
-export const addItemToCart = (name, quanity, id, price) =>{
+export const addItemToCart = (name, quanity, id, price, img) =>{
     return{
         type: ADD_ITEM,
         payload:{
@@ -9,6 +9,7 @@ export const addItemToCart = (name, quanity, id, price) =>{
             quanity,
             id,
             price,
+            img
         }
     };
 };
@@ -19,7 +20,7 @@ export const addItemToCartQuanity = (name, quanity, id, price) =>{
             name,
             quanity,
             id,
-            price
+            price,
         }
     };
 };

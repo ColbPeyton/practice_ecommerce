@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom';
 
-import {printData} from '../../_data/products';
+import {completeData} from '../../_data/products';
 
 import Collection from '../Collection';
 
@@ -24,7 +24,9 @@ function HomePage(props){
                     <img src={banner}  alt='pixel bee creative shop'/>
                 </div>
                 <div className='content'>
-                    <Collection name={'Dogwarts'} item={[printData[0], printData[1],printData[2]]} updatePath={updatePath}/>
+                    <div className='collection'>
+                        <Collection name={'Dogwarts'} item={[completeData[0], completeData[1],completeData[2], completeData[3], completeData[4], completeData[8]]} updatePath={updatePath}/>
+                    </div>
      
                 </div>
             </div>

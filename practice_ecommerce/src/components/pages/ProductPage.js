@@ -46,8 +46,8 @@ function ProductPage(props){
 
     function renderButton(){
         return clicked
-        ? <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id, viewedItem.price);}}>Add Another!</button>
-        : <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id, viewedItem.price);}}>Add To Cart</button>
+        ? <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id, viewedItem.price, viewedItem.img);}}>Add Another!</button>
+        : <button onClick={()=> { props.addItemToCart(viewedItem.name, 1 , viewedItem.id, viewedItem.price, viewedItem.img);}}>Add To Cart</button>
     }
 
     function renderExtraImages(){

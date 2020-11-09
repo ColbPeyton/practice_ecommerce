@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { connect } from 'react-redux';
 import { addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart } from '../redux/actions/actions'
-import img from '../assets/images/placeholderProductImage.jpg';
 
 import '../styles/CartItem.scss';
 
@@ -17,7 +16,7 @@ function CartItem(props){
         <div className='cart-item'>
             <div className='container'>
                 <div className='item-img'>
-                    <img src={img} alt={'placeholder'} />
+                    <img src={props.item.img[0].default} alt={props.item.name} />
                 </div>
                 <div className='item-name'>
                     <h3>{props.item.name}</h3>
