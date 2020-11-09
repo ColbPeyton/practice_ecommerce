@@ -1,27 +1,70 @@
+@import './Colors';
 .cart-item{
-    height: 10%;
+    height: 100%;
     width: 100%;
+    background-color: $purple-dark;
+    color: #fff;
+    min-height: 75px;
+
+    &.even{
+        background-color: $purple-light;
+    }
     .container{
         width: 100%;
+        height: 100%;
+        min-height: 75px;
         display: flex;
         justify-content: space-around;
         align-items: center;
 
         .item-img{
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img{
-                max-height: 50px;
+                max-height: 60px;
             }
             
         }
 
         .item-name{
-            width: 25%;
+            width: 30%;
+            height: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
         }
 
         .item-quanity{
+            height: 75%;
+            width: 30%;
             display: flex;
             justify-content: space-around;
             align-items: center;
+            
+            button{
+                border-radius: 5px;
+                font-size: 1.2rem;
+                background-color: transparent;
+            }
+            p{
+                font-size: 1.5rem;
+                font-weight: 800;
+            }
+        }
+        .item-remove{
+            width: 10%;
+            button{
+                background-color: transparent;
+                
+                
+
+                img{
+                    filter: invert(1);
+                }
+            }
         }
     }
 }

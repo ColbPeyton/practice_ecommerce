@@ -25,7 +25,7 @@ function Cart(props){
             price.current += (item.price * item.quanity);
             return(
                 <div className='cart-item' key={index}>
-                   <CartItem item={item}/>
+                   <CartItem item={item} pos={index}/>
                 </div>
             )
         })

@@ -124,7 +124,7 @@ export const stickerData = [
     {
         name: 'Make Life Sweeter',
         price: 2.00,
-        img: [stickers[14], stickers[15]],
+        img: [stickers[15], stickers[16]],
         id: 20005,
         desc:'Make your life a little sweeter with this adorable sticker! Remind yourself to stay positive by placing this on your laptop or journal.',
         details:[
@@ -253,7 +253,7 @@ export const completeData = [
     {
         name: 'Make Life Sweeter',
         price: 2.00,
-        img: [stickers[14], stickers[15]],
+        img: [stickers[15], stickers[16]],
         id: 20005,
         desc:'Make your life a little sweeter with this adorable sticker! Remind yourself to stay positive by placing this on your laptop or journal.',
         details:[

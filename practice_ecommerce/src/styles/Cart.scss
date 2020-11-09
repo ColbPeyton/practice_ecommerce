@@ -26,59 +26,12 @@
         align-items: flex-start;
         transition: top ease;
         background:$primary-pink;
-    }
 
-    .sidebar-container-links{
-        height: 476px;
-        width: 100%;
-        max-width: 260px;
-
-        ul{
-            width: 98%;
-            max-width: 260px;
-
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            li{
-                height: 50px;
-                width: 100%;
-                padding-left: 1rem;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                border-bottom: 1px solid #f0eeee;
-
-
-                .nav{
-                    height: 100%;
-                    width: 100%;
-                    max-width: 260px;
-
-                    color: #fff;  
-                    letter-spacing: 1px;
-                    text-decoration: none;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    padding-left: 10px;
-                    &:visited{
-                        color: #fff;
-                        text-decoration: none;
-                    }
-                    &:hover{
-                        background-color: #fff;
-                        color: #fff;
-                    }
-
-                }
-                
-            }
+        .price{
         }
-
     }
 
+    
 }
 
 @keyframes slideInCart{
