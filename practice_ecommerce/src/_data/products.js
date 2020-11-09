@@ -286,3 +286,20 @@ export const completeData = [
 
 ]
 
+
+
+
+
+// Eco Sticker Set:
+// This sticker pack is perfect for people who love stickers and the environment! Great for use on notebooks, journals, laptops, and more.
+
+// DETAILS:
+// This sticker bundle contains: 2.5"x2.5" stickers (3) and 1"x1" stickers (2)
+// Printed on recycled kraft sticker paper. These stickers are NOT waterproof.
+// Colors may vary from screen to screen.
+
+// Homegrown: Whether you're a plant or a person, we're all homegrown on mother Earth. Also available as part of the Eco-Friendly Sticker Bundle
+
+// Soul & Soil: Be good to yourself and the planet. This sticker is perfect for bullet journals, notebooks, planners, laptops, and maybe even your planters! Also available as part of the Eco-Friendly Sticker Bundle
+
+// Fishy Friends: Save our beautiful oceans and protect our fishy friends. Also available as part of the Eco-Friendly Sticker Bundle
