@@ -9,7 +9,13 @@ import '../../styles/HomePage.scss';
 
 
 // images
-import banner from '../../assets/images/Branding/Hero_mobile.jpg';
+import banner from '../../assets/images/Branding/Home_Banner.jpg';
+import find from '../../assets/images/Branding/Home_Find.jpg';
+import gift from '../../assets/images/Branding/Home_Gift.jpg';
+import heart from '../../assets/images/Branding/Home_Heart.jpg';
+import leaf from '../../assets/images/Branding/Home_Leaf.jpg';
+
+
 
 function HomePage(props){
 
