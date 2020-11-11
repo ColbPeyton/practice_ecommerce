@@ -33,7 +33,7 @@ function HomePage(props){
                     <img src={banner}  alt='find something'/>
                 </div>
                 <div className='content'>
-                    <Collection name={'Dogwarts'} item={[completeData[0], completeData[1],completeData[2], completeData[3], completeData[4], completeData[8]]} updatePath={updatePath}/>
+                    <Collection name={'Dogwarts'} item={[completeData[0], completeData[6],completeData[2], completeData[3], completeData[4], completeData[1]]} updatePath={updatePath}/>
                 </div>
                 <div className='tags'>
                     <div>
