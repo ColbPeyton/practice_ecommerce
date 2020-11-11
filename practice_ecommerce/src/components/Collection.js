@@ -28,13 +28,8 @@ function Collection(props){
 
     return(
         <div className='collection'>
-            <div className='container'>
-                {/* <div className='title'>
-                    <h2>{props.name}</h2>
-                </div> */}
-                <div className='image-container'>
-                    {renderProducts()}
-                </div>
+            <div className='image-container'>
+                {renderProducts()}
             </div>
         </div>
     )
