@@ -101,7 +101,7 @@ function ProductPage(props){
            <div className='similar-title'>
                 <h2>Check Out Something Similar</h2>
             </div>
-            <div className='products'>
+            <div className='similar-container'>
                 <ProductCarousel products={[
                     <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={true} item={randomProduct(viewedItem.id)}/>,
                     <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={false} item={randomProduct(viewedItem.id)}/>,

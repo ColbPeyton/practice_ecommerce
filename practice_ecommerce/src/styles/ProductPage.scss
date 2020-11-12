@@ -3,7 +3,7 @@
 
 .product-page{
     overflow: hidden;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     margin-top: $header-small;
     .product-container{
@@ -78,6 +78,7 @@
                 font-size: 0.9rem;
                 text-align: left;
                 padding-bottom: 10px;
+                line-height: 1.4;
             }
             .details{
                 height: 10%;
@@ -113,19 +114,34 @@
 
     
     .similar-products{
-        height: 30%;
         max-height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 1rem;
         .similar-title{
             width: 100%;
-            height: 15vh;
+            height: 20%;
+            max-height: 100px;
+            padding: 20px 0;
+
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: $purple-light;
             color: #fff;
+
+            h2{
+                font-size: 1.8rem;
+            }
         }
-        
+        .similar-container{
+            height: 50%;
+            width: 100%;
+            max-height: 300px;
+        }
     }
 }
 
@@ -139,7 +155,7 @@
             .product{
                 width: 100%;
                 height: 100%;
-                min-height: 700px;
+                min-height: 650px;
                 .img-display{
                     height: 50%;
                     width: 90%;
@@ -193,7 +209,7 @@
                     width: 90%;
                     font-size: 0.9rem;
                     font-style: italic;
-                    padding-bottom: 15px;
+                    padding-bottom: 25px;
     
                     p{
                         padding-bottom: 5px;
@@ -214,26 +230,239 @@
         
         .similar-products{
             height: 30%;
-            max-height: 375px;
+            max-height: 400px;
+            overflow: hidden;
             .similar-title{
                 width: 100%;
-                height: 15vh;
+                height: 20%;
+                max-height: 125px;
+                padding: 20px 0;
+
+
                 h2{
-                    width: 90%;
                     font-size: 2rem;
+                    width: 90%;
                 }
             }
-            
+            .similar-container{
+                height: 50%;
+                width: 100%;
+                max-height: 300px;
+            }
         }
     }
 }
 @media screen and (min-width: 480px){
-   
+    .product-page{
+        .product-container{
+            height: 100%;
+            width: 100%;
+            min-height: 750px;
+            max-height: 1000px;
+            .product{
+                width: 100%;
+                height: 100%;
+                min-height: 750px;
+                .img-display{
+                    height: 50%;
+                    width: 90%;
+                    .img-container{
+                        img{
+                            max-width: 100%;
+                            max-height: 400px;
+                        }
+                    }
+                    .img-extra{
+                        margin: 0 auto;
+                        margin-top: 3px;
+                        height: 5%;
+                        width: 90%;
+                        .extra-small{
+                            height: 100%;
+                            width: 15%;
+                            padding-right: 2px;
+                            img{
+                                max-width: 100%;
+                                max-height: 75px;
+                            }
+                        }
+                    }
+    
+                }
+               
+                .name{
+                    height: 10%;
+                    width: 90%;
+                    margin-bottom: 10px;
+                    font-size: 1.5rem;
+                }
+                .price{
+                    height: 5%;
+                    width: 90%;
+                    font-size: 1.5rem;
+                    margin-bottom: 10px;
+    
+                }
+                .desc{
+                    height: 20%;
+                    width: 80%;
+                    font-size: 1.2rem;
+                    text-align: left;
+                    padding-bottom: 15px;
+                }
+                .details{
+                    height: 10%;
+                    width: 90%;
+                    font-size: 0.95rem;
+    
+                    p{
+                        padding-bottom: 5px;
+                    }
+    
+                }
+            }
+            .cart-option{
+                height: 10%;
+                width: 100%;
+                margin-bottom: 2rem;
+                button{
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    
+        
+        .similar-products{
+            height: 30%;
+            max-height: 450px;
+            overflow: hidden;
+            .similar-title{
+                width: 100%;
+                height: 20%;
+                max-height: 140px;
+                padding: 20px 0;
+                h2{
+                    height: 100%;
+                    font-size: 2.5rem;
+                    width: 90%;
+                }
+            }
+            .similar-container{
+                height: 50%;
+                width: 100%;
+                max-height: 350px;
+            }
+        }
+    }
 }
 
 
 @media screen and (min-width: 576px){
+    .product-page{
+        margin-top: $header-med;
+        .product-container{
+            height: 100%;
+            width: 100%;
+            min-height: 850px;
+            max-height: 1200px;
+            .product{
+                width: 100%;
+                height: 100%;
+                min-height: 850px;
+                .img-display{
+                    height: 50%;
+                    width: 90%;
+                    .img-container{
+                        img{
+                            max-width: 100%;
+                            max-height: 425px;
+                        }
+                    }
+                    .img-extra{
+                        margin: 0 auto;
+                        margin-top: 3px;
+                        height: 10%;
+                        width: 90%;
+                        .extra-small{
+                            height: 100%;
+                            width: 15%;
+                            padding-right: 2px;
+                            img{
+                                max-width: 100%;
+                                max-height: 100px;
+                            }
+                        }
+                    }
     
+                }
+               
+                .name{
+                    height: 10%;
+                    width: 90%;
+                    margin-bottom: 10px;
+                    font-size: 1.75rem;
+                }
+                .price{
+                    height: 5%;
+                    width: 90%;
+                    font-size: 1.75rem;
+                    margin-bottom: 10px;
+    
+                }
+                .desc{
+                    height: 20%;
+                    width: 80%;
+                    font-size: 1.2rem;
+                    text-align: left;
+                    padding-bottom: 15px;
+                }
+                .details{
+                    height: 10%;
+                    width: 85%;
+                    font-size: 0.95rem;
+                    padding-bottom: 15px;
+    
+                    p{
+                        padding-bottom: 5px;
+                    }
+    
+                }
+            }
+            .cart-option{
+                height: 10%;
+                width: 100%;
+                margin-bottom: 2rem;
+                button{
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    
+        
+        .similar-products{
+            height: 30%;
+            max-height: 500px;
+            overflow: hidden;
+            .similar-title{
+                width: 100%;
+                height: 20%;
+                max-height: 100px;
+                padding: 20px 0;
+
+
+                h2{
+                    font-size: 2.5rem;
+                    width: 85%;
+                }
+            }
+            .similar-container{
+                height: 50%;
+                width: 100%;
+                max-height: 400px;
+            }
+        }
+      
+    }
 }
 @media screen and (min-width: 768px){
     
