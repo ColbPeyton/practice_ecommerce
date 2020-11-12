@@ -18,7 +18,7 @@
             height: 10vh;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             img{
                 max-width: 100%;
                 height: auto;
@@ -36,6 +36,7 @@
                 align-items: center;
                 background-color: $primary-pink;
                 button{
+                    transition: all 200ms ease-in-out;
                     width: 34%;
                     height: 100%;
                     text-align: center;
@@ -43,9 +44,18 @@
                     border-radius: 0px;
                     padding: 0;
                     background-color: transparent;
+                    &:hover{
+                        background-color: #c24d47;
+
+                    }
     
                     &.active{
                         background-color: $primary-gold;
+
+                        &:hover{
+                            background-color: #d3a551;
+    
+                        }
                     }
     
                 }
@@ -58,6 +68,7 @@
                 align-items: center;
                 background-color: $purple-dark;
                 button{
+                    transition: all 200ms ease-in-out;
                     width: 50%;
                     height: 100%;
                     text-align: center;
@@ -66,9 +77,18 @@
                     padding: 0;
                     background-color: transparent;
                     font-size: 0.9rem;
+                    &:hover{
+                        background-color: #794c58;
+
+                    }
     
                     &.active{
                         background-color: $purple-light;
+                        
+                        &:hover{
+                            background-color: #b36367;
+    
+                        }
                     }
     
                 }
@@ -128,6 +148,10 @@
     .products{
         min-height: 100vh;
         .products-container{
+            .banner{
+                margin-bottom: 0.5rem;
+
+            }
             .catagories-container{
                 height: 20vh;
                 max-height: 95px;
@@ -197,6 +221,8 @@
                 width: 100%;
                 height: 15vh;
                 max-height: 90px;
+                margin-bottom: 1rem;
+
                 img{
                     max-width: 100%;
                     height: auto;
@@ -271,7 +297,8 @@
             .banner{
                 width: 100%;
                 min-height: 115px;
-                max-height: 140px;
+                max-height: 125px;
+
                 img{
                     max-width: 100%;
                     height: auto;
@@ -343,8 +370,8 @@
         .products-container{
             .banner{
                 width: 100%;
-                min-height: 125px;
-                max-height: 140px;
+                min-height: 120px;
+                max-height: 125px;
                 img{
                     max-width: 100%;
                     height: auto;
@@ -353,7 +380,6 @@
             .catagories-container{
                 height: 20vh;
                 max-height: 140px;
-                width: 100%;
                 .catagories{
                     height: 50%;
                     button{
@@ -412,7 +438,80 @@
     }
 }
 @media screen and (min-width: 992px){
-   
+    .products{
+        .products-container{
+            .banner{
+                width: 100%;
+                min-height: 130px;
+                max-height: 145px;
+                max-width: 992px;
+
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .catagories-container{
+                height: 20vh;
+                max-height: 175px;
+                width: 100%;
+                max-width: 992px;
+                .catagories{
+                    height: 50%;
+                    button{
+                        font-size: 1.75rem;
+                    }
+                }
+                .filters{
+                    height: 40%;
+                    button{
+                        font-size: 1.55rem;
+                    }
+              }
+               
+            }
+    
+            .products-listed{
+                margin: .5rem 0;
+                height: 150vh;
+                max-height: 900px;
+                grid-template-columns: repeat(3, minmax(50px, 195px));
+                grid-auto-rows: minmax(100px, 195px);
+    
+                &.sticker{
+                    max-height: 550px;
+                }
+                &.print{
+                    max-height: 475px;
+                }
+    
+                &.bundle{
+                    max-height: 375px;
+                }
+                &.eco-friendly{
+                    max-height: 650px;
+                }
+    
+                &.print.bundle{
+                    max-height: 575px;
+                }
+                &.print.eco-friendly{
+                    max-height: 575px;
+                }
+                &.sticker.eco-friendly{
+                    max-height: 575px;
+                }
+                &.sticker.bundle{
+                    max-height: 575px;
+                }
+    
+                .product-item{
+                    max-height: 195px;
+                }
+            }
+    
+        }
+    }
 }
 @media screen and (min-width: 1200px){
    
@@ -421,3 +520,45 @@
    
 }
 
+
+
+@media (any-pointer: coarse) {
+    .products{
+        .products-container{
+            .catagories-container{
+                .catagories{
+                    button{
+                        &:hover{
+                            background-color: $primary-pink;
+    
+                        }
+        
+                        &.active{    
+                            &:hover{
+                                background-color:$primary-gold;
+        
+                            }
+                        }
+        
+                    }
+                }
+                .filters{
+                    button{
+                        &:hover{
+                            background-color: $purple-dark;
+    
+                        }
+                        &.active{                            
+                            &:hover{
+                                background-color: $purple-light;
+        
+                            }
+                        }
+        
+                    }
+              }
+               
+            }
+        }
+    }
+  }

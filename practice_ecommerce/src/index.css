@@ -4,6 +4,7 @@ body {
     /* OpenSans or Montserrat */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fdedee;
 }
 
 code {
@@ -24,6 +25,7 @@ button{
   padding: 5px 20px; */
   font-size: 1rem;
   color: #fff;
+  cursor: pointer;
 }
 
 button:focus {outline:0;}
