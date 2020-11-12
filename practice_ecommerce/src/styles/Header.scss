@@ -1,9 +1,9 @@
 @import './Colors';
-
+@import './utils';
 .header-container{
     overflow: hidden;
     width: 100vw;
-    height: 75px;
+    height: $header-small;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -113,7 +113,7 @@
 
 @media screen and(min-width: 568px){
     .header-container{
-        height: 85px;
+        height: $header-med;
         .header-dropdown-container{
             height: 30%;
             width: 15%;
@@ -140,7 +140,7 @@
 
 @media screen and (min-width: 992px){
     .header-container{
-        height: 95px;
+        height: $header-large;
         .header-dropdown-container{
             height: 30%;
             width: 15%;
