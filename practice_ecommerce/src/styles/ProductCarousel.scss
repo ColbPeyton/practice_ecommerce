@@ -82,6 +82,7 @@
             }
     
             .controls{
+                height: 45px;
                 width: 100%;
                 .arrow{
                     width: 25%;
@@ -96,6 +97,7 @@
                     width: 50%;
                     height: 100%;         
                     i{
+                        font-size: 1.25rem;
                         padding: 0px 10px;
                     }
                 }
@@ -107,15 +109,61 @@
 }
 
 @media screen and (min-width: 480px){
-   
+    .product-carousel{
+        .container{
+            .controls{
+                height: 50px;
+                .arrow{
+                    width: 25%;
+                    button{
+                        font-size: 2rem;
+                    }
+                }
+    
+                .position{
+                    width: 30%;
+                    height: 100%;         
+                    i{
+                        font-size: 1.5rem;
+                        padding: 0px 10px;
+                    }
+                }
+                
+            }
+        }
+       
+    }
 }
 
 
 @media screen and (min-width: 576px){
-    
+   
 }
 @media screen and (min-width: 768px){
+    .product-carousel{
+        .container{
+            .controls{
+                height: 75px;
+                .arrow{
+                    width: 25%;
+                    button{
+                        font-size: 2.5rem;
+                    }
+                }
     
+                .position{
+                    width: 25%;
+                    height: 100%;         
+                    i{
+                        font-size: 1.75rem;
+                        padding: 0px 10px;
+                    }
+                }
+                
+            }
+        }
+       
+    }
 }
 @media screen and (min-width: 992px){
    
