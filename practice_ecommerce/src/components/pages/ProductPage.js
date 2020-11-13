@@ -67,18 +67,57 @@ function ProductPage(props){
     function updatePath(path){
         props.history.push(`${path}`);
     }
-    return(
-        <main className='product-page'>
-           <div className='product-container'>
-               <div className='product'>
-                    <div className='img-display'>
-                        <div className='img-container'>
-                            <img src={currentImage} alt={viewedItem.name} />
-                        </div>
-                        <div className='img-extra'>
-                            {renderExtraImages()}
-                        </div>
-                </div>
+
+    function renderDisplay(){
+        return props.width <= 991
+        ? smallView()
+        : largeView()
+    }
+
+    function smallView(){
+        return(
+            <div className='product-container'>
+                <div className='product'>
+                 <div className='img-display'>
+                     <div className='img-container'>
+                         <img src={currentImage} alt={viewedItem.name} />
+                     </div>
+                     <div className='img-extra'>
+                         {renderExtraImages()}
+                     </div>
+             </div>
+                 <div className='name'>
+                     <h2>{viewedItem.name}</h2>
+                 </div>
+                 <div className='price'>
+                     <h3>${viewedItem.price}</h3>
+                 </div>
+                 <div className='desc'>
+                     <p>{viewedItem.desc}</p>
+                 </div>
+                 <div className='details'>
+                     {renderProductDetails()}
+                 </div>
+            </div>
+             <div className='cart-option'>
+                 {renderButton()}
+             </div>
+        </div> 
+        )
+    }
+    function largeView(){
+        return(
+            <div className='product-container'>
+                <div className='product'>
+                 <div className='img-display'>
+                     <div className='img-container'>
+                         <img src={currentImage} alt={viewedItem.name} />
+                     </div>
+                     <div className='img-extra'>
+                         {renderExtraImages()}
+                     </div>
+             </div>
+                <div className='side-info'>
                     <div className='name'>
                         <h2>{viewedItem.name}</h2>
                     </div>
@@ -91,11 +130,19 @@ function ProductPage(props){
                     <div className='details'>
                         {renderProductDetails()}
                     </div>
-               </div>
-                <div className='cart-option'>
-                    {renderButton()}
+                    <div className='cart-option'>
+                        {renderButton()}
+                    </div>
                 </div>
-           </div> 
+            </div>
+        </div> 
+        )
+    }
+
+
+    return(
+        <main className='product-page'>
+            {renderDisplay()}
 
            <div className='similar-products'>
            <div className='similar-title'>

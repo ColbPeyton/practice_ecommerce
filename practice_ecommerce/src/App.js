@@ -1,4 +1,5 @@
 import './styles/App.scss';
+import React,{useState, useEffect} from 'react';
 
 import { connect } from 'react-redux'
 
@@ -31,6 +32,22 @@ const routes = [
 
 
 function App(props) {
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  // Header will change based on size of screen, detect change in width
+  useEffect(()=>{
+      window.addEventListener("resize", updateWidth);
+      return () => {
+        window.removeEventListener("resize", updateWidth);
+      }
+
+
+  })
+
+  function updateWidth(){
+    setWidth(window.innerWidth);
+  }
   
   return (
     <div className="App">
@@ -42,10 +59,10 @@ function App(props) {
                 <Route component={} path='/category/:category_id' />
                  */}
 
-                <Route exact component={()=> <ProductPage item={props.currentlyViewedItem}/> } path={`/products/:${props.currentlyViewedItem.id}`} />
+                <Route exact component={()=> <ProductPage width={width} item={props.currentlyViewedItem}/> } path={`/products/:${props.currentlyViewedItem.id}`} />
                 <Route component={Products} path='/products' />
-                <Route component={() => <HomePage /> } path="/home"/>
-                <Route exact component={() => <HomePage /> } path="/"/>
+                <Route component={() => <HomePage width={width} /> } path="/home"/>
+                <Route exact component={() => <HomePage width={width} /> } path="/"/>
                 <Route component={Page404} />
               </Switch>
         <Footer />
