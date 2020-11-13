@@ -21,6 +21,7 @@ function ProductPage(props){
     const path = useRef(getIDFromPath(window.location.href));
     const [clicked, setClicked] = useState(false);
     const [currentImage, setCurrentImage] = useState(props.item.img[0].default)
+    const [otherItems, setOtherItems] = useState([]);
 
     useEffect(()=>{
         if(props.item.id !== path.current[0]){
@@ -35,6 +36,14 @@ function ProductPage(props){
     useEffect(()=>{
         setCurrentImage(viewedItem.img[0].default)
     }, [viewedItem])
+
+    useEffect(()=>{
+        const temp = []
+        for(let i = 0; i < 4; i++){
+            temp.push(randomProduct(viewedItem.id));
+        }
+        setOtherItems(temp);
+    },[viewedItem.id])
 
     // Check if product is located in cart. Will update button text 
     useEffect(()=>{
@@ -72,6 +81,18 @@ function ProductPage(props){
         return props.width <= 991
         ? smallView()
         : largeView()
+    }
+
+    function renderSimilar(){
+        return otherItems.length < 4
+        ? ''
+        :<ProductCarousel products={[
+            <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={true} item={otherItems[0]}/>,
+            <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={false} item={otherItems[1]}/>,
+            <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={true} item={otherItems[2]}/>,
+            <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={false} item={otherItems[3]}/>,
+        ]}
+        />
     }
 
     function smallView(){
@@ -149,13 +170,7 @@ function ProductPage(props){
                 <h2>Check Out Something Similar</h2>
             </div>
             <div className='similar-container'>
-                <ProductCarousel products={[
-                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={true} item={randomProduct(viewedItem.id)}/>,
-                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={false} item={randomProduct(viewedItem.id)}/>,
-                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={true} item={randomProduct(viewedItem.id)}/>,
-                    <SimilarProduct currentItem={props.currentItem} updatePath={updatePath} position={false} item={randomProduct(viewedItem.id)}/>,
-                ]}
-                />
+                {renderSimilar()}
             </div>
 
            </div>
