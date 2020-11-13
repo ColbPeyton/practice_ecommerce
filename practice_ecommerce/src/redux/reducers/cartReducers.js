@@ -1,4 +1,3 @@
-import { act } from 'react-dom/cjs/react-dom-test-utils.production.min';
 import { ADD_ITEM, ADD_QUANITY, REMOVE_ITEM, REMOVE_QUANITY, CURRENT_ITEM } from '../actions/actionTypes';
 
 
