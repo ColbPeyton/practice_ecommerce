@@ -37,6 +37,7 @@ function ProductPage(props){
         setCurrentImage(viewedItem.img[0].default)
     }, [viewedItem])
 
+    // Sets randomProduct on Item load. Fixes issue with re-rendering on state change
     useEffect(()=>{
         const temp = []
         for(let i = 0; i < 4; i++){
