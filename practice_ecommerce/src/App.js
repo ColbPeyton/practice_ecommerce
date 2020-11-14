@@ -65,7 +65,7 @@ function App(props) {
                 <Route exact component={() => <HomePage width={width} /> } path="/"/>
                 <Route component={Page404} />
               </Switch>
-        <Footer />
+        <Footer width={width} />
       </Router>
     </div>
   );

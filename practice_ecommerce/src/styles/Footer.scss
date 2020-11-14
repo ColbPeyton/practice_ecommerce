@@ -1,7 +1,5 @@
 @import './Colors';
 .footer{
-    height: 30vh;
-    max-height: 150px;
     width: 100%;
     background-color: $footer;
     color: #fff;
@@ -14,6 +12,12 @@
             color: #fff;
         }
     }
+
+    &.small{
+    height: 30vh;
+    max-height: 150px;
+
+
 
     .footer-container{
         width: 100%;
@@ -44,4 +48,63 @@
             }
         }
     }
+    }
+
+    
+    &.large{
+        width: 100%;
+        height: 15vh;
+        max-height: 150px;
+        .footer-container{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .img-container{
+                width: 25%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+    
+                img{
+                    max-width: 100%;
+                    height: 75px;
+                }
+            }
+
+            .info{
+                width: 35%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .socials{
+                width: 25%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 3rem;
+            }
+        }
+        .dev{
+            height: 20%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 1.2rem;
+            font-style: italic;
+            letter-spacing: 1px;
+            a{
+                color: $primary-gold;
+                font-weight: 600;
+            }
+        }
+    }
 }
+
