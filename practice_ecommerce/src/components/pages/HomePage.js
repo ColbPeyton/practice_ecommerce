@@ -9,7 +9,8 @@ import '../../styles/HomePage.scss';
 
 
 // images
-import title from '../../assets/images/Branding/Home_Banner.jpg';
+import title from '../../assets/images/Branding/Hero_mobile.jpg';
+import titlelarge from '../../assets/images/Branding/Home_Banner.jpg'
 import banner from '../../assets/images/Branding/Home_Find.jpg';
 import gift from '../../assets/images/Branding/Home_Gift.jpg';
 import heart from '../../assets/images/Branding/Home_Heart.jpg';
@@ -22,12 +23,18 @@ function HomePage(props){
     function updatePath(path){
         props.history.push(`${path}`);
     }
+
+    function renderTitleImage(){
+        return props.width > 991
+        ? titlelarge
+        : title
+    }
     
     return(
         <main className='home'>
             <div className='home-container'>
                 <div className='title'>
-                    <img src={title}  alt='pixel bee creative shop'/>
+                    <img src={renderTitleImage()}  alt='pixel bee creative shop'/>
                 </div>
                 <div className='banner'>
                     <img src={banner}  alt='find something'/>
