@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/Footer.scss';
 
-import me from '../assets/images/Branding/Profile Pic-03.jpg';
+import footerImage from '../assets/images/Branding/footer_image.png';
 const colb = 'https://www.colbypeyton.com/';
 const instagram = '';
 const etsy = '';
@@ -21,7 +21,7 @@ function Footer(props){
             <footer className='footer large'>
                 <div className='footer-container'>
                     <div className='img-container'>
-                        <img src={me} alt='Me' />
+                        <img src={footerImage} alt='Me' />
                     </div>
                     <div className='info'>
                         <ul>

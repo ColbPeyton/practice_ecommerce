@@ -9,8 +9,8 @@ import '../../styles/HomePage.scss';
 
 
 // images
-import title from '../../assets/images/Branding/Hero_mobile.jpg';
-import titlelarge from '../../assets/images/Branding/Home_Banner.jpg'
+import heroMobile from '../../assets/images/Branding/Hero_mobile.jpg';
+import heroLarge from '../../assets/images/Branding/Hero_large.jpg'
 import banner from '../../assets/images/Branding/Home_Find.jpg';
 import gift from '../../assets/images/Branding/Home_Gift.jpg';
 import heart from '../../assets/images/Branding/Home_Heart.jpg';
@@ -24,17 +24,17 @@ function HomePage(props){
         props.history.push(`${path}`);
     }
 
-    function renderTitleImage(){
+    function renderHeroImage(){
         return props.width > 991
-        ? titlelarge
-        : title
+        ? heroLarge
+        : heroMobile
     }
     
     return(
         <main className='home'>
             <div className='home-container'>
                 <div className='title'>
-                    <img src={renderTitleImage()}  alt='pixel bee creative shop'/>
+                    <img src={renderHeroImage()}  alt='pixel bee creative shop'/>
                 </div>
                 <div className='banner'>
                     <img src={banner}  alt='find something'/>
