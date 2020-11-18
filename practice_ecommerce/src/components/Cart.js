@@ -50,7 +50,7 @@ function Cart(props){
         <div className={`cart ${active ? 'active' : 'not-active'}`} style={ chooseAnimation() }>
             <div className='cart-container' style={{top: 0}}>
                 <div className='price'>
-                    <p><span>Total:</span> {price}</p>
+                    <p>Total:</p> <p>$ {price}</p>
                 </div>
                 {renderCart()}
 
