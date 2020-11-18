@@ -25,9 +25,15 @@ function HomePage(props){
     }
 
     function renderHeroImage(){
-        return props.width > 991
+        return props.width > 768
         ? heroLarge
         : heroMobile
+    }
+
+    function renderCollection(){
+        return props.width >= 576
+        ? <Collection name={'Dogwarts'} item={[completeData[1], completeData[1],completeData[1], completeData[3], completeData[1], completeData[1], completeData[1], completeData[1]]} updatePath={updatePath}/>
+        : <Collection name={'Dogwarts'} item={[completeData[1], completeData[6],completeData[1], completeData[1], completeData[4], completeData[1]]} updatePath={updatePath}/>
     }
     
     return(
@@ -40,7 +46,7 @@ function HomePage(props){
                     <img src={banner}  alt='find something'/>
                 </div>
                 <div className='content'>
-                    <Collection name={'Dogwarts'} item={[completeData[0], completeData[6],completeData[2], completeData[3], completeData[4], completeData[1]]} updatePath={updatePath}/>
+                    {renderCollection()}
                 </div>
                 <div className='tags'>
                     <div>

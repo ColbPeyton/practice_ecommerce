@@ -1,5 +1,7 @@
+@import './utils';
+
 .home{
-    margin-top: 75px;
+    margin-top: $header-small;
     height: 100%;
     width: 100%;
 
@@ -107,6 +109,7 @@
 }
 @media screen and (min-width: 576px){
     .home{
+        margin-top: $header-med;
         .home-container{
             .tags{
                 min-height: 325px;
@@ -139,7 +142,6 @@
                 }
             }
             .banner{
-
                 img{
                     max-width: 100%;
                     max-height: 100%;
@@ -149,17 +151,18 @@
                 min-height: 350px;
                 div{
                     img{
-                        max-width: 80%;
+                        max-width: 60%;
                         height: auto;
                         margin-bottom: 10px;
                     }
                     h3{
-                        font-size: 1.5rem;
+                        font-size: 1.75rem;
                         margin-bottom: 5px;
     
                     }
                     p{
-                        font-size: 1.25rem;
+                        font-size: 1.5rem;
+                        width: 90%;
                     }
                 }
             }
@@ -168,23 +171,47 @@
 }
 @media screen and (min-width: 992px){
     .home{
+        margin-top: $header-small;
         .home-container{
-
+            .title{
+                max-height: 490px;
+                overflow: hidden;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .banner{
+                max-height: 460px;
+                margin-bottom: 10px;
+                overflow: hidden;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .content{
+                height: 600px;
+                width: 100%;
+            }
             .tags{
-                min-height: 350px;
+                min-height: 415px;
                 div{
+                    width: 33%;
+                    height: 100%;
                     img{
-                        max-width: 80%;
+                        max-width: 60%;
                         height: auto;
                         margin-bottom: 10px;
                     }
                     h3{
-                        font-size: 1.5rem;
+                        font-size: 2.5rem;
                         margin-bottom: 5px;
     
                     }
                     p{
-                        font-size: 1.25rem;
+                        width: 90%;
+                        font-size: 1.75rem;
                     }
                 }
             }

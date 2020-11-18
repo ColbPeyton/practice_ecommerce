@@ -11,7 +11,7 @@ const pinterest = '';
 function Footer(props){
 
     function renderFooter(){
-        return props.width <= 991
+        return props.width < 768
         ? smallFooter()
         : largeFooter()
     }
