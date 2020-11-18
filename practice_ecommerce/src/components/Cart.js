@@ -32,8 +32,14 @@ function Cart(props){
         : <p>Your cart is empty</p>
     }
 
+    function chooseAnimation(){
+        return props.width >= 1200
+        ? {animation: `${active ? "slideInCartLarge" : "slideOutCartLarge"} 0.5s forwards`}
+        : {animation: `${active ? "slideInCart" : "slideOutCart"} 0.5s forwards`}
+    }
+
     return(
-        <div className={`cart ${active ? 'active' : 'not-active'}`} style={ {animation: `${active ? "slideInCart" : "slideOutCart"} 0.5s forwards`} }>
+        <div className={`cart ${active ? 'active' : 'not-active'}`} style={ chooseAnimation() }>
             <div className='cart-container' style={{top: 0}}>
                 {renderCart()}
                 <div className='price'>

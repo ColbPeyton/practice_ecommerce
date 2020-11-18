@@ -22,13 +22,13 @@ function Header(props){
 
     function renderSidebar(){
         return activeSide 
-        ? <Sidebar routes={props.routes} sidebar={sidebar} disableSidebar={enableOrDisableSidebar} />
+        ? <Sidebar routes={props.routes} sidebar={sidebar} disableSidebar={enableOrDisableSidebar} width={props.width}/>
         : '';
     }
 
     function renderCart(){
         return activeCart 
-        ? <Cart active={cart}/>
+        ? <Cart active={cart} width={props.width}/>
         : '';
     }
 

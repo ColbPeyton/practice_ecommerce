@@ -53,7 +53,7 @@ function App(props) {
     <div className="App">
     <Router >
         <ScrollToTop />
-          <Header routes={routes}/>
+          <Header routes={routes} width={width}/>
               <Switch>
                 {/* <Route component={} path='/category' />
                 <Route component={} path='/category/:category_id' />

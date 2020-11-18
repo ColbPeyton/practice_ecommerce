@@ -1,5 +1,5 @@
 @import './Colors';
-
+@import './utils';
 .sidebar{
     height: 100%;
     width: 260px;
@@ -125,5 +125,55 @@
     to{
         left: -260px;
     }
+}
+
+@keyframes slideInSideLarge{
+    from{
+        left: -400px;
+    }
+    to{
+        left: 0;
+    }
+}
+@keyframes slideOutSideLarge{
+    from{
+        left: 0px;
+    }
+    to{
+        left: -400px;
+    }
+}
+
+
+
+@media screen and (min-width: 350px){
+
+}
+@media screen and (min-width: 480px){
+   
+}
+
+
+@media screen and (min-width: 576px){
+    .sidebar{
+        top: $header-med;
+    }
+}
+@media screen and (min-width: 768px){
+    
+}
+@media screen and (min-width: 992px){
+    .sidebar{
+        top: $header-large;
+    }
+}
+@media screen and (min-width: 1200px){
+    .sidebar{
+        width: 400px;
+
+    }
+}
+@media(min-width: 568px) and (max-height: 414px){
+   
 }
 

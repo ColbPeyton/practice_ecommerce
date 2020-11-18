@@ -25,9 +25,14 @@ function Sidebar(props){
         props.disableSidebar();
     }
 
+    function chooseAnimation(){
+        return props.width >= 1200
+        ? {animation: `${active ? "slideInSideLarge" : "slideOutSideLarge"} 0.5s forwards`}
+        : {animation: `${active ? "slideInSide" : "slideOutSide"} 0.5s forwards`}
+    }
 
     return(
-        <div className={`sidebar ${active ? 'active' : 'not-active'}`} style={ {animation: `${active ? "slideInSide" : "slideOutSide"} 0.5s forwards`} }>
+        <div className={`sidebar ${active ? 'active' : 'not-active'}`} style={ chooseAnimation() }>
             <div className='sidebar-container' style={{top: 0}}>
                 {/* <div className='sidebar-logo'>
                     <NavLink className='link' to='/' onClick={() => disable()}>

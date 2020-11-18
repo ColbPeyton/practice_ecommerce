@@ -55,7 +55,7 @@
     .collection{
         height: 600px;
         .image-container{
-            grid-template-columns: repeat(4, 250px);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 300px);
             button{
                 max-height: 300px;
