@@ -126,7 +126,12 @@
             max-width: 400px;
     
             .price{
-                font-size: 2.5rem;
+                p{
+                    font-size: 2.5rem;
+                    // padding-left: 10px;
+                    width: 150px;
+                    text-align: center;
+                }
             }
         }
     }
