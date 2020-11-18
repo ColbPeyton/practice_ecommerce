@@ -8,21 +8,20 @@ import '../styles/Cart.scss';
 function Cart(props){
 
     const [active, setActive] = useState(true);
-    const price = useRef(0);
+    const [price, setPrice] = useState(updateTotal());
 
     useEffect(()=>{
        setActive(props.active);
-       if(!active){
-           price.current = 0;
-       }
     }, [props.active]);
+
+    useEffect(()=>{
+        setPrice(updateTotal())
+    }, [props.cart])
 
 
     function renderCart(){
-        price.current = 0;
         return props.cart 
         ? props.cart.map((item, index) =>{
-            price.current += (item.price * item.quanity);
             return(
                 <div className='cart-item' key={index}>
                    <CartItem item={item} pos={index}/>
@@ -30,6 +29,15 @@ function Cart(props){
             )
         })
         : <p>Your cart is empty</p>
+    }
+
+    function updateTotal(){
+        let temp = 0;
+        for(const item of props.cart){
+            temp += (item.price * item.quanity);
+        }
+        temp = Math.round(temp * 100) / 100
+       return temp;
     }
 
     function chooseAnimation(){
@@ -41,10 +49,11 @@ function Cart(props){
     return(
         <div className={`cart ${active ? 'active' : 'not-active'}`} style={ chooseAnimation() }>
             <div className='cart-container' style={{top: 0}}>
-                {renderCart()}
                 <div className='price'>
-                    <p>Total: {price.current}</p>
+                    <p><span>Total:</span> {price}</p>
                 </div>
+                {renderCart()}
+
             </div>
         </div>
     )

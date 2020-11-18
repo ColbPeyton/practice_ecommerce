@@ -38,7 +38,7 @@ function CartItem(props){
                 </div>
                 <div className='item-remove'>
                     <button onClick={()=> props.removeItemFromCart(props.item.name, props.item.id)}>
-                    <img src={remove} alt='remove' />
+                        <p>x</p>
                     </button>
                 </div>
             </div>

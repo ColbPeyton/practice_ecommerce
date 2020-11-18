@@ -1,6 +1,9 @@
 @import './Colors';
 @import './utils';
 .cart{
+    // border: 5px solid $footer;
+    border-right: none;
+    border-top-left-radius: 10px;
     height: 100%;
     width: 260px;
     position: absolute;
@@ -29,6 +32,20 @@
         background:$primary-pink;
 
         .price{
+            height: 10%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+            font-size: 2rem;
+            font-style: italic;
+            background-color: $primary-gold;
+            border-bottom: 5px solid $footer;
+            font-weight: 800;
+            span{
+                font-weight: 400;
+            }
         }
     }
 
