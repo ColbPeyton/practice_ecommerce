@@ -4,6 +4,9 @@ import React, {useState, useEffect} from 'react';
 
 import '../styles/Sidebar.scss';
 
+import footerImage from '../assets/images/Branding/footer_image.png';
+
+
 function Sidebar(props){
 
     const [active, setActive] = useState(true);
@@ -29,11 +32,6 @@ function Sidebar(props){
     return(
         <div className={`sidebar ${active ? 'active' : 'not-active'}`} style={ chooseAnimation() }>
             <div className='sidebar-container' style={{top: 0}}>
-                {/* <div className='sidebar-logo'>
-                    <NavLink className='link' to='/' onClick={() => disable()}>
-                        <img src={icon} alt='Home icon'/>
-                    </NavLink> 
-                </div> */}
                 <div className='sidebar-container-links'>
                     <nav>
                         <ul>
@@ -44,6 +42,10 @@ function Sidebar(props){
                 {/* <div className='sidebar-searchbar'>
                     <SearchBar />
                 </div> */}
+
+                <div className='img-container'>
+                        <img src={footerImage} alt='Me' />
+                </div>
  
             </div>
         </div>

@@ -28,6 +28,9 @@ function Footer(props){
                             <li>Lorem </li>
                             <li>Lorem </li>
                         </ul>
+                        <div className='dev'>
+                            <p>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></p>
+                        </div>
                     </div>
                     <div className='socials'>
                         <a href={instagram} target="_blank" rel="noreferrer"><i className="fab fa-instagram" /></a>
@@ -36,9 +39,7 @@ function Footer(props){
                     </div>
           
                 </div> 
-                <div className='dev'>
-                        <p>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></p>
-                    </div>
+
             </footer>
         )
     }

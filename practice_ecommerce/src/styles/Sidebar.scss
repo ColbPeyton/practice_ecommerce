@@ -20,42 +20,15 @@
         width: 100%;
         max-width: 260px;
         // height: 460px;
-        max-height: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         transition: top ease;
         background: $primary-gold;
 
-        .sidebar-logo{
-            width: 98%;
-            max-width: 260px;
-            height: 150px;
-            border-bottom: 1px solid #f0eeee;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .link{
-                background-color: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: none;
-                height: 90px;
-                width: 100%;
-
-                img{
-                    max-height: auto;
-                    max-width: 100%;
-                    cursor: pointer;
-                }
-    
-            }
-        }
-
         .sidebar-container-links{
-            height: 476px;
+            height: 50%;
             width: 100%;
             max-width: 260px;
 
@@ -107,6 +80,19 @@
                 }
             }
 
+        }
+        .img-container{
+            width: 100%;
+            height: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            align-self: flex-end;
+
+            img{
+                max-width: 250px;
+                height: auto;
+            }
         }
 
     }
