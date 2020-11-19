@@ -30,14 +30,14 @@ function Footer(props){
                         </ul>
                     </div>
                     <div className='socials'>
-                        <a href={instagram} target="_blank"><i className="fab fa-instagram" /></a>
-                        <a href={etsy} target="_blank"><i className="fab fa-etsy" /></a>
-                        <a href={pinterest} target="_blank"><i className="fab fa-pinterest-p"/></a>
+                        <a href={instagram} target="_blank" rel="noreferrer"><i className="fab fa-instagram" /></a>
+                        <a href={etsy} target="_blank" rel="noreferrer"><i className="fab fa-etsy" /></a>
+                        <a href={pinterest} target="_blank" rel="noreferrer"><i className="fab fa-pinterest-p"/></a>
                     </div>
           
                 </div> 
                 <div className='dev'>
-                        <p>Developed by <a href={colb} target="_blank">ColbPeyton</a></p>
+                        <p>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></p>
                     </div>
             </footer>
         )
@@ -48,15 +48,15 @@ function Footer(props){
             <footer className='footer small'>
                 <div className='footer-container'>
                     <div className='socials'>
-                        <a href={instagram} target="_blank"><i className="fab fa-instagram" /></a>
-                        <a href={etsy} target="_blank"><i className="fab fa-etsy" /></a>
-                        <a href={pinterest} target="_blank"><i className="fab fa-pinterest-p"/></a>
+                        <a href={instagram} target="_blank" rel="noreferrer"><i className="fab fa-instagram" /></a>
+                        <a href={etsy} target="_blank" rel="noreferrer"><i className="fab fa-etsy" /></a>
+                        <a href={pinterest} target="_blank" rel="noreferrer"><i className="fab fa-pinterest-p"/></a>
                     </div>
                     <div className='info'>
                         <ul>
                             <li>Lorem </li>
                             <li>Lorem </li>
-                            <li>Developed by <a href={colb} target="_blank">ColbPeyton</a></li>
+                            <li>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></li>
                         </ul>
                     </div>
                 </div> 

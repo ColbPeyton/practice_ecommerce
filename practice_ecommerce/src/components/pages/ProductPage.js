@@ -31,7 +31,7 @@ function ProductPage(props){
             // console.log('no', props.item.id, viewedItem)
             setViewedItem(props.item)
         }
-    }, [checkIfProductPath(window.location.href), path])
+    }, [checkIfProductPath(window.location.href), path, props.item])
 
     useEffect(()=>{
         setCurrentImage(viewedItem.img[0].default)
@@ -52,7 +52,7 @@ function ProductPage(props){
             return props.cart.some(item => item.id === props.item.id);
         }
         setClicked(checkIfInCart())
-    },[props.cart, viewedItem.id])
+    },[props.cart, viewedItem.id, props.item.id])
 
     function renderButton(){
         return clicked

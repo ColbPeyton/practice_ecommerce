@@ -83,7 +83,3 @@ export default connect(
   }
   )(App)
 
-                {/* <Route component={() => <About width={width} />} path="/about" />
-                <Route component={Services} path="/services" />
-                <Route component={() => <Appointment width={width} />} path="/appointment" />
-                <Route component={Trainers} path="/trainers" /> */}

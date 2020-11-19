@@ -38,7 +38,7 @@
             justify-content: center;
             align-items: center;
             padding: 1rem 0;
-            font-size: 2rem;
+            font-size: 1.75rem;
             font-style: italic;
             background-color: $primary-gold;
             border-bottom: 5px solid $footer;
@@ -47,6 +47,9 @@
                 // padding-left: 10px;
                 width: 100px;
                 text-align: center;
+            }
+            &:nth-child(1){
+                font-size: 1.5rem;
             }
             // p:nth-child(2){
             //     padding-left: 10px;
@@ -127,7 +130,7 @@
     
             .price{
                 p{
-                    font-size: 2.5rem;
+                    font-size: 2.25rem;
                     // padding-left: 10px;
                     width: 150px;
                     text-align: center;

@@ -74,7 +74,13 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
-                    border-bottom: 1px solid #f0eeee;
+                    border-bottom: 2px solid #f0eeee;
+                    transition: all 250ms ease-in-out;
+                    font-size: 1.25rem;
+                    &:hover{
+                        border-bottom: 2px solid $purple-light;
+                        color: #fff;
+                    }
 
 
                     .nav{
@@ -89,13 +95,11 @@
                         justify-content: flex-start;
                         align-items: center;
                         padding-left: 10px;
+                        transition: all 250ms ease-in-out;
+
                         &:visited{
                             color: #333;
                             text-decoration: none;
-                        }
-                        &:hover{
-                            background-color: #333;
-                            color: #333;
                         }
 
                     }
@@ -170,7 +174,29 @@
 @media screen and (min-width: 1200px){
     .sidebar{
         width: 400px;
+        .sidebar-container{
+            width: 100%;
+            max-width: 400px;
 
+            .sidebar-container-links{
+                height: 476px;
+                width: 100%;
+                max-width: 398px;
+    
+                ul{
+                    max-width: 398px;
+
+                    li{
+                        font-size: 1.5rem;
+                        height: 75px;
+                        .nav{
+                            max-width: 400px;
+                        }
+    
+                    }
+                }
+            }
+        }
     }
 }
 @media(min-width: 568px) and (max-height: 414px){

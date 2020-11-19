@@ -5,7 +5,7 @@ import { addItemToCartQuanity, removeItemFromCart, removeItemQuanityFromCart } f
 
 import add from '../assets/icons/add.svg';
 import minus from '../assets/icons/minus.svg';
-import remove from '../assets/icons/remove.svg';
+// import remove from '../assets/icons/remove.svg';
 
 import '../styles/CartItem.scss';
 

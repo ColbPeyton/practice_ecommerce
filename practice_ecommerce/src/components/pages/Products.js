@@ -1,4 +1,4 @@
-import React,{useState, useRef} from 'react';
+import React,{useState} from 'react';
 import { connect } from 'react-redux'
 
 import {currentItem} from '../../redux/actions/actions';
@@ -12,7 +12,6 @@ function Products(props){
 
     const [catagory, setCatagory] = useState(completeData);
     const [filter, setFilter] = useState('');
-    // const products = useRef(renderProducts())
 
     function renderProducts(catagory){
         return catagory.map((product, index) => {
