@@ -1,0 +1,45 @@
+@import './utils';
+@import './Colors';
+
+.page404{
+    margin-top: $header-small;
+    height: 100%;
+    width: 100%;
+
+    .page404-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .img-container{
+            height: 80%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn-container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .link{
+                text-decoration: none;
+                background-color: $primary-pink;
+                color: #fff;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-size: 2rem;
+
+                &:hover{
+                    background-color: #c24d47;
+                }
+            }
+        }
+    }
+}

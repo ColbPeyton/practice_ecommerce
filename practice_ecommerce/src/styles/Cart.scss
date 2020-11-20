@@ -1,9 +1,6 @@
 @import './Colors';
 @import './utils';
 .cart{
-    // border: 5px solid $footer;
-    border-right: none;
-    border-top-left-radius: 10px;
     height: 100%;
     width: 260px;
     position: absolute;
@@ -11,7 +8,6 @@
     z-index: 100;
     background:$primary-pink;
     overflow: hidden;
-    // transition: all 500ms ease-in-out;
     &.active{
         position: fixed;
 
