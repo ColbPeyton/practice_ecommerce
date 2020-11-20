@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { connect } from 'react-redux'
 
 import {currentItem} from '../../redux/actions/actions';
-import {completeData, printData, stickerData} from '../../_data/products';
+import {completeData, printData, stickerData, bundleData} from '../../_data/products';
 
 import banner from '../../assets/images/Branding/Products_Banner.jpg';
 

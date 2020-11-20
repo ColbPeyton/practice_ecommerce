@@ -28,9 +28,10 @@
         background: $primary-gold;
 
         .sidebar-container-links{
-            height: 50%;
+            height: 40%;
             width: 100%;
             max-width: 260px;
+            max-height: 275px;
 
             ul{
                 width: 98%;
@@ -85,7 +86,7 @@
             width: 100%;
             height: 45%;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-end;
             align-self: flex-end;
 
@@ -166,6 +167,7 @@
 
             .sidebar-container-links{
                 height: 476px;
+                max-height: 476px;
                 width: 100%;
                 max-width: 398px;
     
@@ -186,10 +188,6 @@
             .img-container{
                 width: 100%;
                 height: 45%;
-                display: flex;
-                justify-content: center;
-                align-items: flex-end;
-                align-self: flex-end;
     
                 img{
                     max-width: 370px;

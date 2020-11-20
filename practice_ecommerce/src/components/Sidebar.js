@@ -4,7 +4,7 @@ import React, {useState, useEffect} from 'react';
 
 import '../styles/Sidebar.scss';
 
-import footerImage from '../assets/images/Branding/footer_image.png';
+import footerImage from '../assets/images/Branding/sidebar_girl.png';
 
 
 function Sidebar(props){
