@@ -4,9 +4,9 @@ import '../styles/Footer.scss';
 
 import footerImage from '../assets/images/Branding/footer_image.png';
 const colb = 'https://www.colbypeyton.com/';
-const instagram = '';
-const etsy = '';
-const pinterest = '';
+const instagram = 'https://www.instagram.com/pixelbeecreative/';
+const etsy = 'https://www.etsy.com/shop/PixelBeeCreativeShop';
+const pinterest = 'https://www.pinterest.com/pixelbeecreative/';
 
 function Footer(props){
 
@@ -20,13 +20,13 @@ function Footer(props){
         return(
             <footer className='footer large'>
                 <div className='footer-container'>
-                    <div className='img-container'>
+                    <a className='img-container' href = "mailto: Pixelbeecreative@gmail.com" >
                         <img src={footerImage} alt='Me' />
-                    </div>
+                    </a>
                     <div className='info'>
                         <ul>
                             <li>Lorem </li>
-                            <li>Lorem </li>
+                            <li>Contact me at: <a href = "mailto: Pixelbeecreative@gmail.com">Pixelbeecreative@gmail.com</a></li>
                         </ul>
                         <div className='dev'>
                             <p>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></p>
@@ -56,7 +56,7 @@ function Footer(props){
                     <div className='info'>
                         <ul>
                             <li>Lorem </li>
-                            <li>Lorem </li>
+                            <li>Contact me at: <a href = "mailto: Pixelbeecreative@gmail.com">Pixelbeecreative@gmail.com</a></li>
                             <li>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></li>
                         </ul>
                     </div>

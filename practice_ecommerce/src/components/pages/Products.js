@@ -95,7 +95,7 @@ function Products(props){
                     <button className={`${renderActive(stickerData, catagory)}`} onClick={() => setCatagory(stickerData)}>Stickers</button>
                 </div>
                 <div className='filters'>
-                    <button className={`${renderActive('bundle', filter)}`} onClick={() => updateFilter('bundle')}>Bundles</button>
+                    <button className={`${renderActive('bundle', filter)}`} onClick={() => updateFilter('bundle') }>Bundles</button>
                     <button className={`${renderActive('eco-friendly', filter)}`} onClick={() => updateFilter('eco-friendly')}>Eco-Friendly</button>
                 </div>
             </div>

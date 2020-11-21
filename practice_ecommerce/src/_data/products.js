@@ -13,7 +13,7 @@ export const printData = [
         price: 6.00,
         img: [prints[0], prints[1]],
         id: 10001,
-        desc: 'Accio artwork! Are you the proud parent of a Griffindog, or a proud Griffindor yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
+        desc: 'Spread some holiday cheer with this BTS-inspired printable poster! If you love the holidays and BTS, this is the perfect way to celebrate the season!',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
@@ -25,7 +25,7 @@ export const printData = [
         price: 6.00,
         img: [prints[2], prints[3]],
         id: 10001,
-        desc: 'Accio artwork! Are you the proud parent of a Griffindog, or a proud Griffindor yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
+        desc: 'Ithink you\'re dynamite! Remember to shine your unique light every day with this BTS-inspired printable poster.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
@@ -74,6 +74,18 @@ export const printData = [
         img: [prints[10],prints[11]],
         id: 10004,
         desc: 'Accio artwork! Are you the proud parent of a Snifferin, or a proud Slytherin yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
+        details:[
+            'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
+        ],
+        promo:promo[5],
+        tags:['harry potter', 'eco-friendly']
+    },
+    {
+        name: 'Set The Night Alight Printable Artwork',
+        price: 6.00,
+        img: [prints[10],prints[11]],
+        id: 10004,
+        desc: 'Whether you\'re having friends over or having a dance party with yourself, set the night alight! Inspired by the BTS song "Dynamite," this makes a great gift or home decor for BTS fans.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
