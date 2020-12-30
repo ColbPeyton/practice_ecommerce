@@ -32,7 +32,7 @@ function HomePage(props){
 
     function renderCollection(){
         return props.width >= 576
-        ? <Collection name={'Dogwarts'} item={[completeData[2], completeData[3],completeData[4], completeData[5], completeData[9], completeData[0], completeData[13], completeData[1]]} updatePath={updatePath}/>
+        ? <Collection name={'Dogwarts'} item={[completeData[0], completeData[2],completeData[1], completeData[9], completeData[3], completeData[4], completeData[5], completeData[6]]} updatePath={updatePath}/>
         : <Collection name={'Dogwarts'} item={[completeData[0], completeData[2],completeData[1], completeData[3], completeData[4], completeData[5]]} updatePath={updatePath}/>
     }
     

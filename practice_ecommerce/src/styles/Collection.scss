@@ -48,19 +48,27 @@
 }
 @media screen and (min-width: 768px){
     .collection{
-        height: 450px;
+        height: 500px;
+        .image-container{
+            button{
+                max-height: 275px;
+                img{
+                    max-height: 275px;
+                }
+            }
+        }
     }
 }
 @media screen and (min-width: 992px){
     .collection{
-        height: 600px;
+        height: 650px;
         .image-container{
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 300px);
             button{
-                max-height: 300px;
+                max-height: 325px;
                 img{
-                    max-height: 300px;
+                    max-height: 325px;
                 }
             }
         }
