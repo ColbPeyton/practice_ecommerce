@@ -30,6 +30,7 @@
                 .img-container{
                     height: 100%;
                     width: 100%;
+                    min-height: 360px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -40,19 +41,19 @@
                 }
                 .img-extra{
                     margin-top: 3px;
-                    height: 5%;
+                    height: 20%;
                     width: 100%;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     .extra-small{
                         height: 100%;
-                        width: 15%;
+                        width: 25%;
                         padding-right: 2px;
 
                         img{
                             max-width: 100%;
-                            max-height: 50px;
+                            max-height: 35px;
                             cursor: pointer;
 
 
@@ -165,6 +166,7 @@
                     height: 50%;
                     width: 90%;
                     .img-container{
+                        min-height: 375px;
                         img{
                             max-width: 100%;
                             max-height: 375px;
@@ -172,11 +174,11 @@
                     }
                     .img-extra{
                         margin-top: 3px;
-                        height: 5%;
+                        height: 15%;
                         width: 100%;
                         .extra-small{
                             height: 100%;
-                            width: 15%;
+                            width: 25%;
                             padding-right: 2px;
                             img{
                                 max-width: 100%;
@@ -414,11 +416,11 @@
                     .img-extra{
                         margin: 0 auto;
                         margin-top: 10px;
-                        height: 10%;
+                        height: 20%;
                         width: 90%;
                         .extra-small{
                             height: 100%;
-                            width: 15%;
+                            width: 25%;
                             padding-right: 2px;
                             img{
                                 max-width: 100%;
@@ -521,9 +523,10 @@
                         order: 2;
                         width: 100%;
                         height: 100%;
-        
+                        overflow: hidden;
+                        min-height: 575px;
                         img{
-                            height: 575px;
+                            max-height: 575px;
                             width: auto;
                             
                         }

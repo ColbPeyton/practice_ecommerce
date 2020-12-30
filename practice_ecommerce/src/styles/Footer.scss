@@ -24,8 +24,8 @@
 
 
     &.small{
-    height: 30vh;
-    max-height: 210px;
+    height: 40vh;
+    max-height: 230px;
 
 
 
@@ -38,12 +38,12 @@
         flex-direction: column;
         .socials{
             justify-self: start;
-            height: 40%;
+            height: 25%;
             width: 80%;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            font-size: 2.5rem;
+            font-size: 2.75rem;
         }
         .info{
             height: 40%;
@@ -55,15 +55,15 @@
             text-align: center;
             ul{
                 list-style: none;
-                font-size: 1.1rem;
+                font-size: 1rem;
 
                 li{
                     padding-top: 2px;
 
                     &.tag{
                         font-weight: 600;
-                        padding-bottom: 10px;
-                        font-size: 1.2rem;
+                        padding-bottom: 5px;
+                        font-size: 1.1rem;
                     }
                 }
             }
@@ -163,25 +163,30 @@
 @media screen and (min-width: 350px){
     .footer{
         &.small{
-            height: 30vh;
-            max-height: 220px;
+            height: 40vh;
+            max-height: 225px;
             .footer-container{
                 .socials{
                     justify-self: start;
-                    height: 40%;
+                    height: 30%;
                     width: 75%;
                     max-width: 300px;
-                    font-size: 2.75rem;
+                    font-size: 3.25rem;
                 }
                 .info{
                     height: 40%;
                     width: 80%;
                     max-width: 325px;
                     ul{
-                        font-size: 1.15rem;
-                        &.tag{
-                            font-size: 1.2rem;
+                        font-size: 1rem;
+                        li{
+                            padding-bottom: 5px;
+                            &.tag{
+                                padding-bottom: 10px;
+                                font-size: 1.2rem;
+                            }
                         }
+
                     }
                 }
             }
