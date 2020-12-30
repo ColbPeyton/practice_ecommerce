@@ -246,7 +246,7 @@ export const completeData = [
         name: 'Griffindog Printable Poster',
         price: 6.00,
         img: [prints[4], prints[5]],
-        id: 10001,
+        id: 10002,
         desc: 'Accio artwork! Are you the proud parent of a Griffindog, or a proud Griffindor yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
@@ -258,7 +258,7 @@ export const completeData = [
         name: 'Hufflepup Printable Poster',
         price: 6.00,
         img: [prints[6],prints[7]],
-        id: 10002,
+        id: 10003,
         desc: 'Accio artwork! Are you the proud parent of a Hufflepup, or a proud Hufflepuff yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
@@ -269,8 +269,8 @@ export const completeData = [
     {
         name: 'Ravenpaw Printable Artwork',
         price: 6.00,
-        img: [prints[8],prints[9]],
-        id: 10003,
+        img: [prints[10],prints[11]],
+        id: 10004,
         desc: 'Accio artwork! Are you the proud parent of a Ravenpaw, or a proud Ravenclaw yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
@@ -281,8 +281,8 @@ export const completeData = [
     {
         name: 'Snifferin Printable Artwork',
         price: 6.00,
-        img: [prints[10],prints[11]],
-        id: 10004,
+        img: [prints[12],prints[13]],
+        id: 10005,
         desc: 'Accio artwork! Are you the proud parent of a Snifferin, or a proud Slytherin yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'

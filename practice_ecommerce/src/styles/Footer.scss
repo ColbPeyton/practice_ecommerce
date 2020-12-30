@@ -28,7 +28,7 @@
         flex-direction: column;
         .socials{
             justify-self: start;
-            height: 50%;
+            height: 45%;
             width: 80%;
             display: flex;
             justify-content: space-around;
@@ -44,10 +44,10 @@
             text-align: center;
             ul{
                 list-style: none;
-                font-size: 1rem;
+                font-size: 0.9rem;
 
                 li{
-                    padding-bottom: 5px;
+                    padding-top: 2px;
                 }
             }
         }
@@ -132,7 +132,7 @@
             .footer-container{
                 .socials{
                     justify-self: start;
-                    height: 50%;
+                    height: 45%;
                     width: 75%;
                     max-width: 300px;
                     font-size: 3rem;
@@ -141,7 +141,7 @@
                     height: 40%;
                     width: 80%;
                     ul{
-                        font-size: 1.1rem;
+                        font-size: 1rem;
                     }
                 }
             }

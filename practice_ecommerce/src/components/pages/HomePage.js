@@ -32,8 +32,8 @@ function HomePage(props){
 
     function renderCollection(){
         return props.width >= 576
-        ? <Collection name={'Dogwarts'} item={[completeData[1], completeData[1],completeData[1], completeData[3], completeData[1], completeData[1], completeData[1], completeData[1]]} updatePath={updatePath}/>
-        : <Collection name={'Dogwarts'} item={[completeData[1], completeData[6],completeData[1], completeData[1], completeData[4], completeData[1]]} updatePath={updatePath}/>
+        ? <Collection name={'Dogwarts'} item={[completeData[2], completeData[3],completeData[4], completeData[5], completeData[9], completeData[0], completeData[13], completeData[1]]} updatePath={updatePath}/>
+        : <Collection name={'Dogwarts'} item={[completeData[1], completeData[0],completeData[4], completeData[5], completeData[2], completeData[3]]} updatePath={updatePath}/>
     }
     
     return(
@@ -52,17 +52,17 @@ function HomePage(props){
                     <div>
                         <img src={heart}  alt='heart icon'/>
                         <h3>postivity</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Every design is created to spread smiles, joy, and positivity.</p>
                     </div>
                     <div>
                         <img src={leaf}  alt='leaf icon'/>
                         <h3>eco-friendly</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Eco-friendly materials are used at every step in the process.</p>
                     </div>
                     <div>
                         <img src={gift}  alt='gift icon'/>
                         <h3>a gift</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Even the smallest order is crafted to be a special experience.</p>
                     </div>
                 </div>
             </div>
