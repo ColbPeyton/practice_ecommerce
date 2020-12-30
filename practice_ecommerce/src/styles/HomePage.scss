@@ -42,17 +42,29 @@
 
             div{
                 width: 30%;
+                height: 100%;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 flex-direction: column;
                 text-align: center;
-                img{
-                    max-width: 95%;
-                    height: auto;
+                div{
+                    justify-self: flex-start;
+                    height: 45%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     margin-bottom: 10px;
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                        
+                    }
                 }
+               
                 h3{
+                    height: 20%;
                     font-size: 0.90rem;
                     margin-bottom: 5px;
 
@@ -72,11 +84,12 @@
             .tags{
                 div{
                     h3{
-                        font-size: 1.1rem;
+                        font-size: 1rem;
     
                     }
                     p{
-                        font-size: 0.85rem;
+                        min-height: 75px;
+                        font-size: 0.8rem;
                     }
                 }
             }
@@ -114,10 +127,10 @@
             .tags{
                 min-height: 325px;
                 div{
-                    img{
-                        max-width: 85%;
-                        height: auto;
-                        margin-bottom: 10px;
+                    div{
+                        max-width: 140px;
+                        max-height: 125px;
+
                     }
                     h3{
                         font-size: 1.25rem;
@@ -150,19 +163,16 @@
             .tags{
                 min-height: 350px;
                 div{
-                    img{
-                        max-width: 60%;
-                        height: auto;
-                        margin-bottom: 10px;
-                    }
+
                     h3{
                         font-size: 1.75rem;
-                        margin-bottom: 5px;
+                        margin-bottom: 10px;
     
                     }
                     p{
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
                         width: 90%;
+                        min-height: 100px;
                     }
                 }
             }
@@ -199,14 +209,13 @@
                 div{
                     width: 33%;
                     height: 100%;
-                    img{
-                        max-width: 50%;
-                        height: auto;
-                        margin-bottom: 20px;
+                    div{
+                        max-width: 160px;
+                        max-height: auto;
+                        margin-bottom: 15px;
                     }
                     h3{
                         font-size: 2rem;
-                        margin-bottom: 5px;
     
                     }
                     p{

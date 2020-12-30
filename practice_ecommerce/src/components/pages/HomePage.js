@@ -50,17 +50,23 @@ function HomePage(props){
                 </div>
                 <div className='tags'>
                     <div>
-                        <img src={heart}  alt='heart icon'/>
+                        <div>
+                            <img src={heart}  alt='heart icon'/>
+                        </div>
                         <h3>postivity</h3>
                         <p>Every design is created to spread smiles, joy, and positivity.</p>
                     </div>
                     <div>
-                        <img src={leaf}  alt='leaf icon'/>
+                        <div>
+                            <img src={leaf}  alt='leaf icon'/>
+                        </div>
                         <h3>eco-friendly</h3>
                         <p>Eco-friendly materials are used at every step in the process.</p>
                     </div>
                     <div>
-                        <img src={gift}  alt='gift icon'/>
+                        <div>
+                            <img src={gift}  alt='gift icon'/>
+                        </div>
                         <h3>a gift</h3>
                         <p>Even the smallest order is crafted to be a special experience.</p>
                     </div>
