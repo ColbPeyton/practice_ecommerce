@@ -25,8 +25,8 @@ function Footer(props){
                     </a>
                     <div className='info'>
                         <ul>
-                            <li>Lorem </li>
-                            <li>Contact me at: <a href = "mailto: Pixelbeecreative@gmail.com">Pixelbeecreative@gmail.com</a></li>
+                            <li className='tag'>Illustrations, Stickers, & More!</li>
+                            <li>Contact me at: <a className='email' href = "mailto: Pixelbeecreative@gmail.com">pixelbeecreative@gmail.com</a></li>
                         </ul>
                         <div className='dev'>
                             <p>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></p>
@@ -55,9 +55,9 @@ function Footer(props){
                     </div>
                     <div className='info'>
                         <ul>
-                            <li>Lorem </li>
-                            <li>Contact me at: <a href = "mailto: Pixelbeecreative@gmail.com">Pixelbeecreative@gmail.com</a></li>
-                            <li>Developed by <a href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></li>
+                            <li className='tag'>Illustrations, Stickers, & More!</li>
+                            <li>Contact me at: <a className='email' href = "mailto: pixelbeecreative@gmail.com">pixelbeecreative@gmail.com</a></li>
+                            <li>Developed by <a className='dev' href={colb} target="_blank" rel="noreferrer">ColbPeyton</a></li>
                         </ul>
                     </div>
                 </div> 
