@@ -106,31 +106,10 @@
             display: grid;
             grid-template-columns: repeat(2, minmax(50px, 125px));
             grid-auto-rows: minmax(100px, 135px);
-            row-gap: 5px;
-            column-gap: 5px;
+            row-gap: 10px;
+            column-gap: 10px;
             transition: all 500ms ease-in-out;
             justify-content: center;
-
-            // &.sticker{
-            //     max-height: 450px;
-            // }
-            // &.print{
-            //     max-height: 285px;
-            // }
-
-            // &.bundle{
-            //     max-height: 200px;
-            // }
-            // &.eco-friendly{
-            //     max-height: 425px;
-            // }
-
-            // &.print.eco-friendly{
-            //     max-height: 275px;
-            // }
-            // &.sticker.eco-friendly{
-            //     max-height: 250px;
-            // }
 
             .product-item{
                 width: 100%;
