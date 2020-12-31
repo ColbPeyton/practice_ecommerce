@@ -98,9 +98,10 @@
         }
 
         .products-listed{
-            margin: .5rem 0;
-            height: 150vh;
-            max-height: 725px;
+            margin: .75rem 0;
+            min-height: 75vh;
+            // max-height: 200vh;
+            // max-height: 725px;
             width: 100%;
             display: grid;
             grid-template-columns: repeat(2, minmax(50px, 125px));
@@ -110,26 +111,26 @@
             transition: all 500ms ease-in-out;
             justify-content: center;
 
-            &.sticker{
-                max-height: 450px;
-            }
-            &.print{
-                max-height: 285px;
-            }
+            // &.sticker{
+            //     max-height: 450px;
+            // }
+            // &.print{
+            //     max-height: 285px;
+            // }
 
-            &.bundle{
-                max-height: 200px;
-            }
-            &.eco-friendly{
-                max-height: 425px;
-            }
+            // &.bundle{
+            //     max-height: 200px;
+            // }
+            // &.eco-friendly{
+            //     max-height: 425px;
+            // }
 
-            &.print.eco-friendly{
-                max-height: 275px;
-            }
-            &.sticker.eco-friendly{
-                max-height: 250px;
-            }
+            // &.print.eco-friendly{
+            //     max-height: 275px;
+            // }
+            // &.sticker.eco-friendly{
+            //     max-height: 250px;
+            // }
 
             .product-item{
                 width: 100%;
@@ -147,7 +148,6 @@
 
 @media screen and (min-width: 350px){
     .products{
-        min-height: 100vh;
         .products-container{
             .banner{
                 margin-bottom: 0.5rem;
@@ -173,41 +173,14 @@
             }
     
             .products-listed{
-                margin: .5rem 0;
-                height: 150vh;
-                max-height: 775px;
+                // height: 150vh;
+                max-height: auto;
+
                 grid-template-columns: repeat(2, minmax(50px, 150px));
-                grid-auto-rows: minmax(100px, 150px);
-    
-                &.sticker{
-                    max-height: 450px;
-                }
-                &.print{
-                    max-height: 375px;
-                }
-    
-                &.bundle{
-                    max-height: 275px;
-                }
-                &.eco-friendly{
-                    max-height: 425px;
-                }
-    
-                &.print.bundle{
-                    max-height: 375px;
-                }
-                &.print.eco-friendly{
-                    max-height: 375px;
-                }
-                &.sticker.eco-friendly{
-                    max-height: 275px;
-                }
-                &.sticker.bundle{
-                    max-height: 275px;
-                }
+                grid-auto-rows: minmax(200px, 200px);
     
                 .product-item{
-                    max-height: 150px;
+                    max-height: 200px;
                 }
             }
     
@@ -216,7 +189,6 @@
 }
 @media screen and (min-width: 480px){
     .products{
-        min-height: 100vh;
         .products-container{
             .banner{
                 width: 100%;
@@ -249,41 +221,11 @@
             }
     
             .products-listed{
-                margin: .5rem 0;
-                height: 150vh;
-                max-height: 900px;
                 grid-template-columns: repeat(2, minmax(50px, 175px));
-                grid-auto-rows: minmax(100px, 175px);
-    
-                &.sticker{
-                    max-height: 550px;
-                }
-                &.print{
-                    max-height: 375px;
-                }
-    
-                &.bundle{
-                    max-height: 275px;
-                }
-                &.eco-friendly{
-                    max-height: 550px;
-                }
-    
-                &.print.bundle{
-                    max-height: 475px;
-                }
-                &.print.eco-friendly{
-                    max-height: 475px;
-                }
-                &.sticker.eco-friendly{
-                    max-height: 475px;
-                }
-                &.sticker.bundle{
-                    max-height: 475px;
-                }
+                grid-auto-rows: minmax(200px, 200px);
     
                 .product-item{
-                    max-height: 175px;
+                    max-height: 200px;
                 }
             }
     
@@ -327,41 +269,11 @@
             }
     
             .products-listed{
-                margin: .5rem 0;
-                height: 150vh;
-                max-height: 900px;
                 grid-template-columns: repeat(3, minmax(50px, 175px));
-                grid-auto-rows: minmax(100px, 175px);
-    
-                &.sticker{
-                    max-height: 550px;
-                }
-                &.print{
-                    max-height: 375px;
-                }
-    
-                &.bundle{
-                    max-height: 275px;
-                }
-                &.eco-friendly{
-                    max-height: 550px;
-                }
-    
-                &.print.bundle{
-                    max-height: 475px;
-                }
-                &.print.eco-friendly{
-                    max-height: 475px;
-                }
-                &.sticker.eco-friendly{
-                    max-height: 475px;
-                }
-                &.sticker.bundle{
-                    max-height: 475px;
-                }
+                grid-auto-rows: minmax(200px, 200px);
     
                 .product-item{
-                    max-height: 175px;
+                    max-height: 200px;
                 }
             }
     
@@ -399,41 +311,11 @@
             }
     
             .products-listed{
-                margin: .5rem 0;
-                height: 150vh;
-                max-height: 900px;
-                grid-template-columns: repeat(3, minmax(50px, 195px));
-                grid-auto-rows: minmax(100px, 195px);
-    
-                &.sticker{
-                    max-height: 550px;
-                }
-                &.print{
-                    max-height: 475px;
-                }
-    
-                &.bundle{
-                    max-height: 375px;
-                }
-                &.eco-friendly{
-                    max-height: 650px;
-                }
-    
-                &.print.bundle{
-                    max-height: 575px;
-                }
-                &.print.eco-friendly{
-                    max-height: 575px;
-                }
-                &.sticker.eco-friendly{
-                    max-height: 575px;
-                }
-                &.sticker.bundle{
-                    max-height: 575px;
-                }
+                grid-template-columns: repeat(3, minmax(100px, 200px));
+                grid-auto-rows: minmax(225px, 225px);
     
                 .product-item{
-                    max-height: 195px;
+                    max-height: 225px;
                 }
             }
     
@@ -476,49 +358,18 @@
             }
     
             .products-listed{
-                margin: .5rem 0;
-                height: 150vh;
-                max-height: 900px;
-                grid-template-columns: repeat(3, minmax(50px, 195px));
-                grid-auto-rows: minmax(100px, 195px);
-    
-                &.sticker{
-                    max-height: 550px;
-                }
-                &.print{
-                    max-height: 475px;
-                }
-    
-                &.bundle{
-                    max-height: 375px;
-                }
-                &.eco-friendly{
-                    max-height: 650px;
-                }
-    
-                &.print.bundle{
-                    max-height: 575px;
-                }
-                &.print.eco-friendly{
-                    max-height: 575px;
-                }
-                &.sticker.eco-friendly{
-                    max-height: 575px;
-                }
-                &.sticker.bundle{
-                    max-height: 575px;
-                }
-    
+                grid-template-columns: repeat(3, minmax(100px, 200px));
+                grid-auto-rows: minmax(250px, 250px);
                 .product-item{
-                    max-height: 195px;
+                    max-height: 250px;
                 }
             }
     
         }
     }
 }
-@media screen and (min-width: 1200px){
-   
+@media screen and (min-width: 1400px){
+
 }
 @media(min-width: 568px) and (max-height: 414px){
     .products{
@@ -551,38 +402,8 @@
             }
     
             .products-listed{
-                margin: .5rem 0;
-                height: 250vh;
-                max-height: 800px;
                 grid-template-columns: repeat(3, minmax(50px, 175px));
                 grid-auto-rows: minmax(100px, 175px);
-    
-                &.sticker{
-                    max-height: 550px;
-                }
-                &.print{
-                    max-height: 375px;
-                }
-    
-                &.bundle{
-                    max-height: 275px;
-                }
-                &.eco-friendly{
-                    max-height: 550px;
-                }
-    
-                &.print.bundle{
-                    max-height: 475px;
-                }
-                &.print.eco-friendly{
-                    max-height: 475px;
-                }
-                &.sticker.eco-friendly{
-                    max-height: 475px;
-                }
-                &.sticker.bundle{
-                    max-height: 475px;
-                }
     
                 .product-item{
                     max-height: 175px;
