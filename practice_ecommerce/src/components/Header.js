@@ -61,8 +61,12 @@ function Header(props){
 
     function changeCartIcon(){
         return activeCart
-        ? <img className='close-icon' src={closeIcon} alt='close'></img>
-        : <img className='cart-icon' src={cartIcon} alt='cart'></img>
+        ? <div className='header-dropdown-container active '>
+            <div className='dropdown close'></div>
+            <div className='dropdown close'></div>
+            <div className='dropdown close'></div>
+        </div>
+        : <i className="fas fa-shopping-basket cart-icon"></i>
     }
 
     return(
@@ -75,7 +79,7 @@ function Header(props){
                 </button>
                 <div className='header-logo'>
                     <NavLink exact className='link' to='/'>
-                        <img src={logo} alt='gym icon'/>
+                        <img src={logo} alt='logo'/>
                     </NavLink> 
                 </div>
                 <button className={`header-cart-container ${activeCart ? 'active' : ''}`} onClick={()=> enableOrDisableCart()}>

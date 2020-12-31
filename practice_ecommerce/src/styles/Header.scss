@@ -33,6 +33,13 @@
             background: $primary-pink;
             border-radius: 10px;
             transition: all 0.10s;
+
+            &.close{
+                background: $primary-gold;
+                border: 2px solid $primary-gold;
+                min-width: 32px;
+                max-width: 32px;
+            }
         }
 
         &:focus { outline: none; }
@@ -104,10 +111,11 @@
         cursor: pointer;
 
         .cart-icon{
-            height: auto;
-            max-width: 100%;
+            color: $primary-pink;
+            font-size: 2rem;
             cursor: pointer;
         }
+
     }
 }
 
@@ -131,8 +139,9 @@
         }
     
         .header-cart-container{
-            height: 30%;
-            width: 15%;
+            .cart-icon{
+                font-size: 2.2rem;    
+            }
         }
     }
 }
@@ -163,10 +172,10 @@
                 max-height: 75px;
             }
         }
-    
         .header-cart-container{
-            height: 35%;
-            width: 15%;
+            .cart-icon{
+                font-size: 2.75rem;    
+            }
         }
     }
 }

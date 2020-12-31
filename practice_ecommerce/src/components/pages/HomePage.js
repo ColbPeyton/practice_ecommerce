@@ -53,7 +53,7 @@ function HomePage(props){
                         <div>
                             <img src={heart}  alt='heart icon'/>
                         </div>
-                        <h3>postivity</h3>
+                        <h3>positivity</h3>
                         <p>Every design is created to spread smiles, joy, and positivity.</p>
                     </div>
                     <div>
