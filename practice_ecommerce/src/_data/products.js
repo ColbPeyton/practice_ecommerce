@@ -108,7 +108,7 @@ export const stickerData = [
                 'This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[12],
+        promo:promo[13],
         tags:['sticker']
     },
     {
@@ -123,7 +123,7 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[10],
+        promo:promo[11],
         tags:['sticker']
     },
     {
@@ -137,11 +137,11 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[11],
+        promo:promo[12],
         tags:['sticker']
     },
     {
-        name: 'Make Life Sweeter',
+        name: 'Make Life Sweeter Sticker',
         price: 2.00,
         img: [stickers[10], stickers[11]],
         id: 20005,
@@ -151,7 +151,7 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[14],
+        promo:promo[15],
         tags:['sticker']
     },
 
@@ -212,7 +212,7 @@ export const bundleData = [
                 'Printed on recycled kraft paper. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[13],
+        promo:promo[9],
         tags:['political', 'bundle', 'sticker' ]
     },
 ]

@@ -14,6 +14,7 @@ function Products(props){
     const [filter, setFilter] = useState('');
 
     function renderProducts(){
+        // eslint-disable-next-line
         return completeData.map((product, index) => {
             if(product.tags.includes(catagory) || catagory === 'all'){
                 if(!filter){

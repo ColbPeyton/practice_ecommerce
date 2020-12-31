@@ -41,7 +41,7 @@ function ProductPage(props){
     useEffect(()=>{
         const temp = []
         for(let i = 0; i < 4; i++){
-            temp.push(randomProduct(viewedItem.id));
+            temp.push(randomProduct(viewedItem.id, temp));
         }
         setOtherItems(temp);
     },[viewedItem.id])
@@ -61,6 +61,7 @@ function ProductPage(props){
     }
 
     function renderExtraImages(){
+        // eslint-disable-next-line
         return viewedItem.img.map(((item,index) => {
             if(item.default !== currentImage){
                 return <div className='extra-small' key={index} onClick={()=>setCurrentImage(item.default)}><img src={item.default} alt={viewedItem.name}/></div>

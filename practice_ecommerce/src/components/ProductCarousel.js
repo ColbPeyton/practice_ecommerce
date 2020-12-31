@@ -10,12 +10,13 @@ function ProductCarousel(props){
 
     useEffect(()=>{
         if(cycle){
-            const id = setTimeout(()=> cycleRight(), 6000);
+            const id = setTimeout(()=> cycleRight(), 4000);
             return () => clearTimeout(id);
         }else{
-            const id = setTimeout(()=> setCycle(true), 6000);
+            const id = setTimeout(()=> setCycle(true), 4000);
             return () => clearTimeout(id);
         }
+        // eslint-disable-next-line
     }, [index, cycle])
 
  

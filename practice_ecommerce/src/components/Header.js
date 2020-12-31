@@ -5,8 +5,6 @@ import Sidebar from './Sidebar';
 import Cart from './Cart';
 
 import logo from '../assets/images/Branding/Pixel Bee Logo.png'
-import cartIcon from '../assets/icons/shopping.svg';
-import closeIcon from '../assets/icons/close.svg';
 
 import '../styles/Header.scss';
 

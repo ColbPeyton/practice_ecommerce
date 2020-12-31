@@ -21,11 +21,12 @@ export function checkIfProductPath(path){
     return regex.test(path);
 }
 
-export function randomProduct(id){
+export function randomProduct(id, currCollection = []){
     let random;
     do{
         random = Math.floor(Math.random() * completeData.length)
-    }while(random === id)
+        // check if number is random and not currently in the similar array 
+    }while(random === id || currCollection.includes(completeData[random]))
     
     return completeData[random];
 }
