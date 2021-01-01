@@ -25,7 +25,7 @@ export const printData = [
         price: 6.00,
         img: [prints[2], prints[3]],
         id: 10002,
-        desc: 'Ithink you\'re dynamite! Remember to shine your unique light every day with this BTS-inspired printable poster.',
+        desc: 'I think you\'re dynamite! Remember to shine your unique light every day with this BTS-inspired printable poster.',
         details:[
             'Please note that this listing is for a digital download. If you would prefer to have a physical print shipped to you-hang tight! Physical prints and stickers will be available soon'
         ],
@@ -100,7 +100,7 @@ export const stickerData = [
     {
         name: 'Rock and Rollerskate Glossy Sticker',
         price: 1.99,
-        img: [stickers[7], stickers[8], stickers[9]],
+        img: [stickers[9], stickers[8], stickers[10]],
         id: 20001,
         desc:'Rock and roll with this cute rollerskater sticker! This sticker makes a unique addition to laptops, journals, and more!',
         details:[
@@ -114,7 +114,7 @@ export const stickerData = [
     {
         name: 'Spicy Lil\' Kimchi Glossy Sticker',
         price: 1.99,
-        img: [stickers[0], stickers[1], stickers[2], stickers[3]],
+        img: [stickers[3], stickers[0], stickers[2], stickers[1]],
         id: 20002,
         desc:'Are you a little on the spicy side? Show it off with this sassy kimchi sticker. Perfect for journals, notebooks, laptops, and more!',
         details:[
@@ -128,8 +128,8 @@ export const stickerData = [
     },
     {
         name: 'Snug as a Pug Glossy Sticker',
-        price: 2.00,
-        img: [stickers[4], stickers[5]],
+        price: 1.99,
+        img: [stickers[5], stickers[4], stickers[6]],
         id: 20003,
         desc:'Cold weather means more blanket snuggles! Be like this happy pug and stay warm this winter! This sticker is perfect for decorating laptops, planners/bullet journals, and more!',
         details:[
@@ -142,9 +142,9 @@ export const stickerData = [
     },
     {
         name: 'Make Life Sweeter Sticker',
-        price: 2.00,
-        img: [stickers[10], stickers[11]],
-        id: 20005,
+        price: 1.99,
+        img: [stickers[12], stickers[11]],
+        id: 20004,
         desc:'Make your life a little sweeter with this adorable sticker! Remind yourself to stay positive by placing this on your laptop or journal.',
         details:[
                 'Dimensions: 2" x 2"', 
@@ -160,7 +160,7 @@ export const stickerData = [
 export const bundleData = [
     {
         name: 'Biden Sticker Pack',
-        price: 5.50,
+        price: 1.99,
         img: [bundles[0], bundles[1], bundles[2], bundles[3], bundles[4]],
         id: 30046,
         desc:'An election 2020 sticker set supporting Joe Biden. Buy the pack or just one sticker. Show your support by placing these stickers on your laptop, notebook, and more!',
@@ -175,7 +175,7 @@ export const bundleData = [
     },
     {
         name: 'Plant Lover Stickers | Eco-Friendly Sticker Set',
-        price: 2.00,
+        price: 2.99,
         img: [bundles[5], bundles[6], bundles[7], bundles[8]],
         id: 30001,
         desc:'Are you a proud plant parent? If you\'ve decorated your house with plants, why not your notebook, planner, or laptop?',
@@ -185,35 +185,51 @@ export const bundleData = [
                 'Colors may vary from screen to screen.'
             ],
         promo:promo[8],
-        tags:['political', 'bundle', 'sticker', 'eco-friendly' ]
+        tags:['bundle', 'sticker', 'eco-friendly' ]
+    },
+    {
+        name: 'Eco-Friendly Sticker Bundle',
+        price: 7.50,
+        img: [bundles[9], bundles[10], bundles[11], bundles[12],],
+        id: 30004,
+        desc:'This sticker pack is perfect for people who love stickers and the environment! Great for use on notebooks, journals, laptops, and more.',
+        details:[
+                'This sticker bundle contains: 2.5"x2.5" stickers (3) and 1"x1" stickers (2)', 
+                'Printed on recycled kraft paper. These stickers are NOT waterproof.',
+                'Colors may vary from screen to screen.'
+            ],
+        promo:promo[8],
+        tags:['bundle', 'sticker', 'eco-friendly' ]
     },
     {
         name: 'Home Office Sticker Set',
-        price: 5.50,
-        img: [bundles[9], bundles[10], bundles[11], bundles[12], bundles[13]],
+        price: 1.99,
+        img: [bundles[13], bundles[14], bundles[15], bundles[16], bundles[17], bundles[18], bundles[19], bundles[20] ,bundles[21], bundles[22]],
         id: 30002,
         desc:'Are you a proud plant parent? If you\'ve decorated your house with plants, why not your notebook, planner, or laptop?',
         details:[
-                'Dimensions: Potted Plant: 3" x 3" | Bloom: 3.75" x 2"', 
-                'Printed on recycled kraft paper. These stickers are NOT waterproof.',
+                'Sticker Pack Contains: No Pants, Work Hard & Be Kind, Home Office, and Creating Greatness designs.',
+                'Dimensions: 2" x 2"', 
+                'Printed on glossy white sticker. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
         promo:promo[9],
-        tags:['political', 'bundle', 'sticker' ]
+        tags:['bundle', 'sticker' ]
     },
     {
         name: 'Self-Care Sticker Set',
-        price: 5.50,
-        img: [bundles[14], bundles[15], bundles[16], bundles[17], bundles[18]],
+        price: 1.99,
+        img: [ bundles[23], bundles[24], bundles[25], bundles[26], bundles[27], bundles[28], bundles[29], bundles[30], bundles[31], bundles[32]],
         id: 30003,
-        desc:'Are you a proud plant parent? If you\'ve decorated your house with plants, why not your notebook, planner, or laptop?',
+        desc:'With everything going on in life, it can be easy to forget to take care of ourselves. Remember the importance of self-care with this cute sticker set. Buy one or all four!',
         details:[
-                'Dimensions: Potted Plant: 3" x 3" | Bloom: 3.75" x 2"', 
-                'Printed on recycled kraft paper. These stickers are NOT waterproof.',
+                'Sticker Pack Contains: Breathe In & Out, Take a Walk, Let Out Steam, and Take a Break designs.',
+                'Dimensions: 2" x 2"', 
+                'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
         promo:promo[9],
-        tags:['political', 'bundle', 'sticker' ]
+        tags:['bundle', 'sticker' ]
     },
 ]
 
