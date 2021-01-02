@@ -189,7 +189,7 @@ export const bundleData = [
     },
     {
         name: 'Eco-Friendly Sticker Bundle',
-        price: 7.50,
+        price: 7.99,
         img: [bundles[9], bundles[10], bundles[11], bundles[12],],
         id: 30004,
         desc:'This sticker pack is perfect for people who love stickers and the environment! Great for use on notebooks, journals, laptops, and more.',
