@@ -108,7 +108,7 @@ export const stickerData = [
                 'This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[13],
+        promo:promo[15],
         tags:['sticker']
     },
     {
@@ -123,7 +123,7 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[11],
+        promo:promo[12],
         tags:['sticker']
     },
     {
@@ -137,7 +137,7 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[12],
+        promo:promo[13],
         tags:['sticker']
     },
     {
@@ -151,7 +151,7 @@ export const stickerData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[15],
+        promo:promo[17],
         tags:['sticker']
     },
 
@@ -213,7 +213,7 @@ export const bundleData = [
                 'Printed on glossy white sticker. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[9],
+        promo:promo[11],
         tags:['bundle', 'sticker' ]
     },
     {
@@ -228,7 +228,7 @@ export const bundleData = [
                 'Printed on glossy white sticker paper. This sticker is NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[9],
+        promo:promo[14],
         tags:['bundle', 'sticker' ]
     },
 ]
