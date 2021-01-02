@@ -10,7 +10,7 @@ const bundles = importImages(require.context('../assets/images/Bundles', false, 
 export const printData = [
     {
         name: 'Holiday Cheer Printable Poster',
-        price: 6.00,
+        price: 5.99,
         img: [prints[0], prints[1]],
         id: 10001,
         desc: 'Spread some holiday cheer with this BTS-inspired printable poster! If you love the holidays and BTS, this is the perfect way to celebrate the season!',
@@ -22,7 +22,7 @@ export const printData = [
     },
     {
         name: 'Dynamite Printable Poster',
-        price: 6.00,
+        price: 5.99,
         img: [prints[2], prints[3]],
         id: 10002,
         desc: 'I think you\'re dynamite! Remember to shine your unique light every day with this BTS-inspired printable poster.',
@@ -34,7 +34,7 @@ export const printData = [
     },
     {
         name: 'Set The Night Alight Printable Artwork',
-        price: 6.00,
+        price: 5.99,
         img: [prints[8],prints[9]],
         id: 10003,
         desc: 'Whether you\'re having friends over or having a dance party with yourself, set the night alight! Inspired by the BTS song "Dynamite," this makes a great gift or home decor for BTS fans.',
@@ -46,7 +46,7 @@ export const printData = [
     },
     {
         name: 'Griffindog Printable Poster',
-        price: 6.00,
+        price: 5.99,
         img: [prints[4], prints[5]],
         id: 10004,
         desc: 'Accio artwork! Are you the proud parent of a Griffindog, or a proud Griffindor yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
@@ -58,7 +58,7 @@ export const printData = [
     },
     {
         name: 'Hufflepup Printable Poster',
-        price: 6.00,
+        price: 5.99,
         img: [prints[6],prints[7]],
         id: 10005,
         desc: 'Accio artwork! Are you the proud parent of a Hufflepup, or a proud Hufflepuff yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
@@ -70,7 +70,7 @@ export const printData = [
     },
     {
         name: 'Ravenpaw Printable Artwork',
-        price: 6.00,
+        price: 5.99,
         img: [prints[10],prints[11]],
         id: 10006,
         desc: 'Accio artwork! Are you the proud parent of a Ravenpaw, or a proud Ravenclaw yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
@@ -82,7 +82,7 @@ export const printData = [
     },
     {
         name: 'Snifferin Printable Artwork',
-        price: 6.00,
+        price: 5.99,
         img: [prints[12],prints[13]],
         id: 10007,
         desc: 'Accio artwork! Are you the proud parent of a Snifferin, or a proud Slytherin yourself? Show some school spirit with this adorable Harry Potter-inspired illustration! This high-resolution artwork can be printed at home or at your local print shop in 4 sizes: 5x7, 8x10, 11x14, and 16x20. Artwork is available for download after purchase.',
@@ -198,7 +198,7 @@ export const bundleData = [
                 'Printed on recycled kraft paper. These stickers are NOT waterproof.',
                 'Colors may vary from screen to screen.'
             ],
-        promo:promo[8],
+        promo:promo[9],
         tags:['bundle', 'sticker', 'eco-friendly' ]
     },
     {

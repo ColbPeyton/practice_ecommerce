@@ -20,15 +20,18 @@ function Products(props){
         return completeData.map((product, index) => {
             if(product.tags.includes(catagory) || catagory === 'all'){
                 if(!filter){
-                    return <button className='product-item' onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
-                        style={
-                            {
-                                backgroundImage: `url(${product.img[0].default})`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center center'
-                            }
-                        }>  
-                    </button>
+                   return <div className='product-item-container'>
+                        <button className='product-item' onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 
+                            style={
+                                {
+                                    backgroundImage: `url(${product.img[0].default})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center center'
+                                }
+                            }>  
+                        </button>
+                    </div>
+                     
                 }
                 return product.tags.includes(filter)
                     ?<button className='product-item' onClick={()=> updateCurrentAndLoadProductPage(product)} key={index} 

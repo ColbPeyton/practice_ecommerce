@@ -25,8 +25,8 @@ export function randomProduct(id, currCollection = []){
     let random;
     do{
         random = Math.floor(Math.random() * completeData.length)
-        // check if number is random and not currently in the similar array 
-    }while(random === id || currCollection.includes(completeData[random]))
+        // check if number is random and not currently in the similar array or === to the currently viewed item
+    }while(completeData[random].id === id || currCollection.includes(completeData[random]))
     
     return completeData[random];
 }
