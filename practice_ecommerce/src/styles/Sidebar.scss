@@ -143,8 +143,8 @@
         top: $header-med;
         .sidebar-container{
             .img-container{
-               height: 50%;
-
+               height: 40%;
+               overflow: hidden;
                img{
                 max-width: 200px;
                 height: auto;
