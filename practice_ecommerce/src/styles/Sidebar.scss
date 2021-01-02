@@ -143,7 +143,12 @@
         top: $header-small;
         .sidebar-container{
             .img-container{
-               height: 45%;
+               height: 50%;
+
+               img{
+                max-width: 200px;
+                height: auto;
+            }
             }
     
         }
