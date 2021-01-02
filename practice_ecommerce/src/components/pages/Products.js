@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import {currentItem} from '../../redux/actions/actions';
 import {completeData} from '../../_data/products';
 
+import Loading from '../Loading';
+
 import banner from '../../assets/images/Branding/Products_Banner.jpg';
 
 import '../../styles/Products.scss';
@@ -42,6 +44,7 @@ function Products(props){
             }
         })
     }
+
 
     // function updateStylingCatagory(){
     //     switch(catagory){
@@ -104,7 +107,7 @@ function Products(props){
             </div>
 
             <div className={`products-listed ${updateGridSizing()} ${filter}`}>
-                {renderProducts(catagory)}
+                {renderProducts()}
             </div>
             </div>
         </main>

@@ -11,7 +11,8 @@ const pinterest = 'https://www.pinterest.com/pixelbeecreative/';
 function Footer(props){
 
     function renderFooter(){
-        return props.width < 768
+        // Fixing footer issue with large iphones. Will find another solution TEMP
+        return props.width < 768 || props.width === 812
         ? smallFooter()
         : largeFooter()
     }
