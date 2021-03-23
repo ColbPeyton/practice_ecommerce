@@ -1,3 +1,10 @@
+# Practice Ecommerce
+**practice_ecommerce** is a practice project implementing an ecommerce type web app utilizing React/Redux.
+
+This project consists of the front-end of the web app. Currently no plans to implement a backend at this time.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
